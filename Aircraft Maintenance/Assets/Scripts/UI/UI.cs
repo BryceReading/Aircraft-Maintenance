@@ -11,19 +11,25 @@ public class UI : MonoBehaviour
     public Canvas help;
     public Canvas aircraftSelect;
 
+    bool paused = false;
+
     void Update()
     {
         //Gets menu up
-        if (Input.GetKeyDown("space"))
+        if (paused == false && Input.GetKeyDown("space"))
         {
             menu.enabled = true;
+            Time.timeScale = 0;
+            paused = true;
         }
     }
 
     //Menu closes
     public void Resume()
     {
-        menu.enabled = false;   
+        menu.enabled = false;
+        Time.timeScale = 1;
+        paused = false;
     }
 
     //Goes to settings
@@ -51,6 +57,9 @@ public class UI : MonoBehaviour
     public void SampleScene()
     {
         SceneManager.LoadScene("SampleScene");
+        aircraftSelect.enabled = false;
+        Time.timeScale = 1;
+        paused = false;
     }
 
     //Goes back, should go back to the menu
