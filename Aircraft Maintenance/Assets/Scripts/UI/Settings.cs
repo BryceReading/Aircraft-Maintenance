@@ -19,9 +19,12 @@ public class Settings : MonoBehaviour
 
     public int s_movement = 0;
 
+    public DesktopCamLooking desktopCamLooking;
+
     //Scale the mouse sensitivity
     public void MouseSensitivity()
     {
+        desktopCamLooking.Sense = mouseSensitivity.value;
         mouseText.text = mouseSensitivity.value.ToString();
     }
 

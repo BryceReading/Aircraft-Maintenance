@@ -7,6 +7,8 @@ public class DesktopMovement : MonoBehaviour
     /*Player move & look variables*/
     public CharacterController controller;
 
+    public float mouseSensitivity = 5f;
+
     // Update is called once per frame
     void Update()
     {
@@ -14,6 +16,6 @@ public class DesktopMovement : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * y;
-        controller.Move(move * 5f * Time.deltaTime);
+        controller.Move(move * mouseSensitivity * Time.deltaTime);
     }
 }

@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
         menu.enabled = false;
         aircraftSelect.enabled = true;
     }
-    
+
     //Goes to the SampleScene
     public void SampleScene()
     {
