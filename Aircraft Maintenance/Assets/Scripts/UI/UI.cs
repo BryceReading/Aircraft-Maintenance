@@ -10,14 +10,16 @@ public class UI : MonoBehaviour
     public Canvas settings;
     public Canvas help;
     public Canvas aircraftSelect;
+    public Canvas removeModel;
 
     bool paused = false;
 
     void Update()
     {
         //Gets menu up
-        if (paused == false && Input.GetKeyDown("space"))
+        if (paused == false && Input.GetKeyDown(KeyCode.Escape))
         {
+            removeModel.enabled = false;
             menu.enabled = true;
             Time.timeScale = 0;
             paused = true;
@@ -27,6 +29,7 @@ public class UI : MonoBehaviour
     //Menu closes
     public void Resume()
     {
+        removeModel.enabled = true;
         menu.enabled = false;
         Time.timeScale = 1;
         paused = false;
@@ -56,6 +59,7 @@ public class UI : MonoBehaviour
     //Goes to the SampleScene
     public void SampleScene()
     {
+        removeModel.enabled = true;
         SceneManager.LoadScene("SampleScene");
         aircraftSelect.enabled = false;
         Time.timeScale = 1;
