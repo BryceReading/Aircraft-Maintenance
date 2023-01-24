@@ -1,2 +1,0 @@
-# Starting compiling Assembly-CSharp.dll
-E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-0aba4c7803fae8f4fbaf982fb7022767
