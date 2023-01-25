@@ -39,28 +39,3 @@ class CreateFolderOnBuild : IPostprocessBuildWithReport
     }
 }
 #endif
-
-
-
-/*using UnityEngine;
-using UnityEditor;
-using System.IO;
-using UnityEditor.Build;
-#if UNITY_EDITOR
-using UnityEditor.Callbacks;
-#endif
-
-public class CreateFolderOnBuild : MonoBehaviour
-{
-    [PostProcessBuild]
-    build
-    public static void OnPostprocessBuild(string pathToBuiltProject)
-    {
-        // Create the new folder in the Resources folder
-        string resourcesFolder = Path.Combine(pathToBuiltProject, "Resources");
-        string newFolder = Path.Combine(resourcesFolder, "Cockpit");
-        string newFolder2 = Path.Combine(resourcesFolder, "MainDoor");
-        Directory.CreateDirectory(newFolder);
-        Directory.CreateDirectory(newFolder2);
-    }
-}*/
