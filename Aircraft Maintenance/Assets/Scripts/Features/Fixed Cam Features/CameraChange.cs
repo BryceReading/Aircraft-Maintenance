@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraChange : MonoBehaviour
 {
     [HeaderAttribute("Camera keyboard Movment")]
-    public float speed;
+    public float speed = 10.0f;
 
     void Start()
     {
@@ -14,29 +14,33 @@ public class CameraChange : MonoBehaviour
     void Update()
     {
         RotateCam();
+
+        // change speed with scroll wheel
+        speed += Input.GetAxis("Mouse ScrollWheel") * 10;
     }
 
     void RotateCam()
     {
-        ///
-        /// Rotate the camera with keyboard inputs
-        /// 
-        if (Input.GetKey(KeyCode.LeftArrow)) transform.Rotate(Vector3.up, speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.RightArrow)) transform.Rotate(Vector3.up, -speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.UpArrow)) transform.Rotate(Vector3.right, speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.DownArrow)) transform.Rotate(Vector3.right, -speed * Time.deltaTime);
+        // Rotate the camera with keyboard inputs at a set distance
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.Rotate(Vector3.up, -speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.Rotate(Vector3.right, speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.Rotate(Vector3.right, -speed * Time.deltaTime);
         if (Input.GetKeyDown("[0]")) transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        //Maintain a set distance from the object usign raycasting
-        RaycastHit hit;
-        
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10))
+        // Rotate the camera with mouse inputs
+        if (Input.GetMouseButton(0))
         {
-            transform.position = hit.point;
+            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * speed * 10 * Time.deltaTime);
+            transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * speed * 10 * Time.deltaTime);
         }
 
-        // Zomming in and out
+        // lock Z rotation of camera
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 
+        // zoom in and out with q and e
+        //if (Input.GetKey(KeyCode.Q)) transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //if (Input.GetKey(KeyCode.E)) transform.Translate(Vector3.back * speed * Time.deltaTime);
 
     }
 }
