@@ -4,22 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AircraftUILoading))]
 public class AircraftSelect : MonoBehaviour
 {
     public Button nextButton;
     public Button previousButton;
 
     public Button ModelOne;
-    public Button ModelTwo;
 
     public Canvas ModelOneParts;
-    public Canvas ModelTwoParts;
+
+    private AircraftUILoading AUIL;
 
     int page = 0;
 
     void Start()
     {
-        ModelTwo.gameObject.SetActive(false);
+        AUIL = GetComponent<AircraftUILoading>();
+    }
+
+    private void OnEnable()
+    {
+        //AUIL.loadViews("");
     }
 
     //Goes to next model
@@ -28,18 +34,14 @@ public class AircraftSelect : MonoBehaviour
         if (page == 0)
         {
             ModelOne.gameObject.SetActive(false);
-            ModelTwo.gameObject.SetActive(true);
 
             ModelOneParts.enabled = false;
-            ModelTwoParts.enabled = true;
         }
         if(page == 1)
         {
             ModelOne.gameObject.SetActive(true);
-            ModelTwo.gameObject.SetActive(false);
 
             ModelOneParts.enabled = true;
-            ModelTwoParts.enabled = false;
         }
 
         if(page < 1)
@@ -55,32 +57,28 @@ public class AircraftSelect : MonoBehaviour
     //Goes to previous model
     public void Previous()
     {
-        if(page == 1)
+        /*if(page == 1)
         {
             ModelOne.gameObject.SetActive(true);
-            ModelTwo.gameObject.SetActive(false);
 
             ModelOneParts.enabled = true;
-            ModelTwoParts.enabled = false;
         }
         
-        if(page == 0)
+        else if(page == 0)
         {
             ModelOne.gameObject.SetActive(false);
-            ModelTwo.gameObject.SetActive(true);
 
             ModelOneParts.enabled = false;
-            ModelTwoParts.enabled = true;
         }
 
-        if (page < 1)
+        else if (page < 1)
         {
             page++;
         }
         else
         {
             page--;
-        }
+        }*/
     }
 }
 

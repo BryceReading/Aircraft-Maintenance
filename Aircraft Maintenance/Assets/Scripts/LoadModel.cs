@@ -12,7 +12,8 @@ public class LoadModel : MonoBehaviour
     const int size = 5;
 
     string v_path;
-    string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail" };
+    [HideInInspector]
+    public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail" };
     List<string>[] v_objList = new List<string>[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
     GameObject[] currentActive = new GameObject[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
     public List<string> modelList = new List<string>();
@@ -56,7 +57,6 @@ public class LoadModel : MonoBehaviour
             for (int i = 1; i < v_objList.Length; i++)
             {
                 x+=Convert.ToInt16(v_objList[i].Find(q => q.Split('.')[0] == p.Split('.')[0]) != null);
-                Debug.Log("1");
             }
             if (x != v_objList.Length - 1)
             {
@@ -65,17 +65,22 @@ public class LoadModel : MonoBehaviour
                     try { v_objList[i].RemoveAt(v_objList[i].FindIndex(q => q.Split('.')[0] == p.Split('.')[0])); }
                     catch { }
                 }
-                Debug.Log("2");
             }
             else
             {
-                Debug.Log("3");
                 modelList.Add(p.Split('.')[0]);
             }
         }
+        swapModel(modelList[0]);
     }
 
-    private void swapModel(string modelName)
+    public GameObject loadModel(string modelName, string region, Vector3 location)
+    {
+        GameObject loadModel = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
+        return Instantiate(loadModel, location, Quaternion.identity);
+    }
+
+    public void swapModel(string modelName)
     {
         for (int i = 0; i < currentActive.Count(); i++)
         {
