@@ -6,9 +6,18 @@ public class CameraChange : MonoBehaviour
 {
     [HeaderAttribute("Camera keyboard Movment")]
     public float speed = 10.0f;
+    GameObject target;
 
     void Start()
     {
+        target = GameObject.Find("TargetObj");
+        
+        MeshFilter meshFillter = target.GetComponent<MeshFilter>();
+        Mesh mesh = meshFillter.mesh;
+        Bounds bound = mesh.bounds;
+
+        Vector3 size = bound.size;
+        Vector3 center = bound.center;
     }
 
     void Update()
@@ -39,8 +48,8 @@ public class CameraChange : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 
         // zoom in and out with q and e
-        //if (Input.GetKey(KeyCode.Q)) transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        //if (Input.GetKey(KeyCode.E)) transform.Translate(Vector3.back * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.Q)) transform.Translate(Vector3.forward * speed * Time.deltaTime); 
+        if (Input.GetKey(KeyCode.E)) transform.Translate(Vector3.back * speed * Time.deltaTime);
 
     }
 }
