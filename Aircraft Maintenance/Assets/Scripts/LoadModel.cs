@@ -71,10 +71,10 @@ public class LoadModel : MonoBehaviour
                 modelList.Add(p.Split('.')[0]);
             }
         }
-        swapModel(modelList[0]);
+        //swapModel(modelList[0]);
     }
 
-    public GameObject loadModel(string modelName, string region, Vector3 location)
+    public GameObject loadViewModel(string modelName, string region, Vector3 location)
     {
         GameObject loadModel = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
         return Instantiate(loadModel, location, Quaternion.identity);

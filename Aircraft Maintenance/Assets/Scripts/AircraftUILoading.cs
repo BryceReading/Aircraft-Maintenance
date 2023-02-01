@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class AircraftUILoading : MonoBehaviour
     GameObject[] currentLoaded = new GameObject[5];
     [HideInInspector]
     public RenderTexture[] displays = new RenderTexture[5];
+    public int currentModel;
 
     private void Start()
     {
@@ -21,8 +23,13 @@ public class AircraftUILoading : MonoBehaviour
         cameras[0].orthographic = true;
         cameras[0].targetDisplay = 2;
         cameras[0].clearFlags = CameraClearFlags.SolidColor;
-        cameras[0].backgroundColor = Color.gray;
+        Color tempColour = Color.gray;
+        tempColour.a = 0;
+        cameras[0].backgroundColor = tempColour;
         cameras[0].targetTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
+        cameras[0].gameObject.AddComponent<Light>().type = LightType.Directional;
+        cameras[0].gameObject.GetComponent<Light>().intensity = 0.25f;
+        cameras[0].gameObject.GetComponent<Light>().cullingMask = 1 << 7;
         loaderCode = GetComponent<LoadModel>();
 
         for (int i = 1; i < cameras.Length; i++)
@@ -42,13 +49,19 @@ public class AircraftUILoading : MonoBehaviour
         locations[4] = new Vector3(14901.26f, 1182.201f, -2357.01f);
     }
 
-    public void loadViews(string modelName)
+    public bool CheckLoop(int model)
     {
-        if(modelName == "") { modelName = loaderCode.modelList[0]; }
+        if (model >= loaderCode.modelList.Count) { model = 0; }
+        else if (model < 0) { model = loaderCode.modelList.Count - 1; }
+        return model == currentModel;
+    }
+
+    public void loadViews(int model)
+    {
         for(int i = 0; i< loaderCode.nameOf.Length; i++)
         {
             Destroy(currentLoaded[i]);
-            currentLoaded[i] = loaderCode.loadModel(modelName, loaderCode.nameOf[i], locations[i]);
+            currentLoaded[i] = loaderCode.loadViewModel(loaderCode.modelList[model], loaderCode.nameOf[i], locations[i]);
             currentLoaded[i].layer = 7;
             currentLoaded[i].AddComponent<RotateCode>();
             Bounds bounds = currentLoaded[i].GetComponent<MeshFilter>().mesh.bounds;
@@ -59,6 +72,7 @@ public class AircraftUILoading : MonoBehaviour
             cameras[i].orthographicSize = maxDimension;
             transform.Find("Aircraft Model Parts").Find(loaderCode.nameOf[i]).GetComponent<RawImage>().texture = cameras[i].activeTexture;
         }
+        transform.Find("Aircraft Model").Find("Text").GetComponent<Text>().text = loaderCode.modelList[model];
     }
 
 }

@@ -31,54 +31,19 @@ public class AircraftSelect : MonoBehaviour
     //Goes to next model
     public void Next()
     {
-        if (page == 0)
+        if (!AUIL.CheckLoop(AUIL.currentModel + 1))
         {
-            ModelOne.gameObject.SetActive(false);
-
-            ModelOneParts.enabled = false;
-        }
-        if(page == 1)
-        {
-            ModelOne.gameObject.SetActive(true);
-
-            ModelOneParts.enabled = true;
-        }
-
-        if(page < 1)
-        {
-            page++;
-        }
-        else
-        {
-            page--;
+            AUIL.loadViews(AUIL.currentModel++);
         }
     }
 
     //Goes to previous model
     public void Previous()
     {
-        /*if(page == 1)
+        if (!AUIL.CheckLoop(AUIL.currentModel - 1))
         {
-            ModelOne.gameObject.SetActive(true);
-
-            ModelOneParts.enabled = true;
+            AUIL.loadViews(AUIL.currentModel--);
         }
-        
-        else if(page == 0)
-        {
-            ModelOne.gameObject.SetActive(false);
-
-            ModelOneParts.enabled = false;
-        }
-
-        else if (page < 1)
-        {
-            page++;
-        }
-        else
-        {
-            page--;
-        }*/
     }
 }
 
