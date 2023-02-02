@@ -12,6 +12,7 @@ TagManager:
   - Water
   - UI
   - 
+  - ModelUI
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Teleport
   m_SortingLayers:
   - name: Default
     uniqueID: 0
