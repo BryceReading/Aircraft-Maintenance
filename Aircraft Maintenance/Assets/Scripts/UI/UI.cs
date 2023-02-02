@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     public Canvas settings;
     public Canvas help;
     public Canvas aircraftSelect;
+    public Canvas removeModels;
 
     bool paused = false;
 
@@ -19,6 +20,7 @@ public class UI : MonoBehaviour
         if (paused == false && Input.GetKeyDown(KeyCode.Escape))
         {
             menu.enabled = true;
+            removeModels.enabled = false;
             Time.timeScale = 0;
             paused = true;
         }
@@ -30,6 +32,7 @@ public class UI : MonoBehaviour
         menu.enabled = false;
         Time.timeScale = 1;
         paused = false;
+        removeModels.enabled = true;
     }
 
     //Goes to settings
@@ -54,13 +57,14 @@ public class UI : MonoBehaviour
     }
 
     //Goes to the SampleScene
-    public void SampleScene()
-    {
-        SceneManager.LoadScene("SampleScene");
-        aircraftSelect.enabled = false;
-        Time.timeScale = 1;
-        paused = false;
-    }
+    //public void SampleScene()
+    //{
+    //    SceneManager.LoadScene("SampleScene");
+    //    aircraftSelect.enabled = false;
+    //    Time.timeScale = 1;
+    //    paused = false;
+    //    removeModels.enabled = true;
+    //}
 
     //Goes back, should go back to the menu
     public void Back()

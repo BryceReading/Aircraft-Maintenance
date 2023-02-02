@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour
 {
-    public Slider mouseSensitivity;
-    public Slider soundVolume;
+    public Slider mouseSensitivityFPS;
+    public Slider mouseSensitivityFixed;
+    public Slider soundVolumeFPS;
+    public Slider soundVolumeFixed;
 
-    public Text mouseText;
-    public Text soundText;
+    public Text mouseTextFPS;
+    public Text mouseTextFixed;
+    public Text soundTextFPS;
+    public Text soundTextFixed;
     public Text helpText;
 
     public Button desktopMouse;
@@ -19,24 +23,52 @@ public class Settings : MonoBehaviour
 
     public int s_movement;
     public float s_sensitivty;
+    public float s_sound;
     public DesktopCamLooking desktopCamLooking;
 
     public Canvas RemoveModels;
-
+    public Canvas FPSSettings;
+    public Canvas FixedSettings;
 
     //Scale the mouse sensitivity
     public void MouseSensitivity()
-    {
-        desktopCamLooking.Sense = mouseSensitivity.value;
-        s_sensitivty = mouseSensitivity.value - 80.0f;
-
-        mouseText.text = s_sensitivty.ToString();
+    {        
+        if (FPSSettings.enabled == true)
+        {
+            desktopCamLooking.Sense = mouseSensitivityFPS.value;
+            mouseSensitivityFixed.value = mouseSensitivityFPS.value;
+        }
+        else if (FixedSettings.enabled == true)
+        {
+            desktopCamLooking.Sense = mouseSensitivityFixed.value;
+            mouseSensitivityFPS.value = mouseSensitivityFixed.value;
+        }
+        s_sensitivty = mouseSensitivityFPS.value - 80.0f;
+        mouseTextFPS.text = s_sensitivty.ToString();
+        mouseTextFixed.text = s_sensitivty.ToString();
     }
 
     //Scale the sound volume
+    //Attach AudioSource to the object and use s_sound to for the volume
     public void SoundVolume()
     {
-        soundText.text = soundVolume.value.ToString();
+        //Need to connect both volume settings
+        if (FPSSettings.enabled == true)
+        {
+            soundVolumeFixed.value = soundVolumeFPS.value;
+            soundTextFPS.text = soundVolumeFPS.value.ToString();
+            soundTextFixed.text = soundVolumeFixed.value.ToString();
+        }
+        else if(FixedSettings.enabled == true)
+        {
+            soundVolumeFPS.value = soundVolumeFixed.value;
+            soundTextFPS.text = soundVolumeFPS.value.ToString();
+            soundTextFixed.text = soundVolumeFixed.value.ToString();
+        }
+
+
+        s_sound = soundVolumeFPS.value / 100;
+        Debug.Log(s_sound);
     }
 
     //Change to Desktop Mouse controls
