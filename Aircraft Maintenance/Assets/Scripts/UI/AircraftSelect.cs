@@ -16,8 +16,6 @@ public class AircraftSelect : MonoBehaviour
 
     private AircraftUILoading AUIL;
 
-    int page = 0;
-
     void Start()
     {
         AUIL = GetComponent<AircraftUILoading>();
@@ -33,7 +31,7 @@ public class AircraftSelect : MonoBehaviour
     {
         if (!AUIL.CheckLoop(AUIL.currentModel + 1))
         {
-            AUIL.loadViews(AUIL.currentModel++);
+            AUIL.loadViews2(AUIL.currentModel++);
         }
     }
 
@@ -42,7 +40,7 @@ public class AircraftSelect : MonoBehaviour
     {
         if (!AUIL.CheckLoop(AUIL.currentModel - 1))
         {
-            AUIL.loadViews(AUIL.currentModel--);
+            AUIL.loadViews2(AUIL.currentModel--);
         }
     }
 }

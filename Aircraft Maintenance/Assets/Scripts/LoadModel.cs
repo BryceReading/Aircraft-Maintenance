@@ -13,7 +13,7 @@ public class LoadModel : MonoBehaviour
 
     string v_path;
     [HideInInspector]
-    public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail" };
+    public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail" }; //When you figure out the skeleton Loading, add in a skeleton here
     List<string>[] v_objList = new List<string>[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
     GameObject[] currentActive = new GameObject[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
     public List<string> modelList = new List<string>();
@@ -74,9 +74,9 @@ public class LoadModel : MonoBehaviour
         //swapModel(modelList[0]);
     }
 
-    public GameObject loadViewModel(string modelName, string region, Vector3 location)
+    public GameObject loadViewModel(string modelName, int region, Vector3 location)
     {
-        GameObject loadModel = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
+        GameObject loadModel = Resources.Load<GameObject>(nameOf[region] + "/" + modelName + "." + nameOf[region]);
         return Instantiate(loadModel, location, Quaternion.identity);
     }
 
@@ -86,13 +86,13 @@ public class LoadModel : MonoBehaviour
         {
             Destroy(currentActive[i]);
             currentActive[i] = null;
-        }
+        }      
 
         GameObject Cockpit = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
-        GameObject DropDoor = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
-        GameObject MainDoor = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
-        GameObject RotorEngine = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
-        GameObject Tail = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
+        GameObject DropDoor = Resources.Load<GameObject>(nameOf[1] + "/" + modelName + "." + nameOf[1]);
+        GameObject MainDoor = Resources.Load<GameObject>(nameOf[2] + "/" + modelName + "." + nameOf[2]);
+        GameObject RotorEngine = Resources.Load<GameObject>(nameOf[3] + "/" + modelName + "." + nameOf[3]);
+        GameObject Tail = Resources.Load<GameObject>(nameOf[4] + "/" + modelName + "." + nameOf[4]);
 
 
         currentActive[0] = Instantiate(Cockpit, Vector3.zero, Quaternion.identity);
