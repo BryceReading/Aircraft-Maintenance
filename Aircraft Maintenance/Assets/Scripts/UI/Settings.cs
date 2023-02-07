@@ -30,6 +30,9 @@ public class Settings : MonoBehaviour
     public Canvas FPSSettings;
     public Canvas FixedSettings;
 
+    CameraChange cameraChange;
+    ModeSwitch modeSwitch;
+
     //Scale the mouse sensitivity
     public void MouseSensitivity()
     {        
@@ -43,6 +46,7 @@ public class Settings : MonoBehaviour
             desktopCamLooking.Sense = mouseSensitivityFixed.value;
             mouseSensitivityFPS.value = mouseSensitivityFixed.value;
         }
+     
         s_sensitivty = mouseSensitivityFPS.value - 80.0f;
         mouseTextFPS.text = s_sensitivty.ToString();
         mouseTextFixed.text = s_sensitivty.ToString();

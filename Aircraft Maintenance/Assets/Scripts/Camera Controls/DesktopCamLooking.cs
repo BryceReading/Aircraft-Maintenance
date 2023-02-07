@@ -12,6 +12,7 @@ public class DesktopCamLooking : MonoBehaviour
     void Start()
     {
         /*Lock the cursor while the user is looking around but let it be usable when they need to click on the screen*/
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

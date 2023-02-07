@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class CameraChange : MonoBehaviour
 {
@@ -42,7 +43,11 @@ public class CameraChange : MonoBehaviour
         {
             transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * speed * 10 * Time.deltaTime);
             transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * speed * 10 * Time.deltaTime);
-        }
+
+            // Lock mouse movment while the user is looking around but let it be usable when they need to click on the screen
+            Cursor.lockState = CursorLockMode.Locked;
+        } else
+            Cursor.lockState = CursorLockMode.None;
 
         // lock Z rotation of camera
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
