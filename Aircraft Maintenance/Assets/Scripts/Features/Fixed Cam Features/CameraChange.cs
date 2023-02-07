@@ -7,11 +7,11 @@ public class CameraChange : MonoBehaviour
 {
     [HeaderAttribute("Camera keyboard Movment")]
     public float speed = 10.0f;
-    GameObject target;
+    public GameObject target;
 
     void Start()
     {
-        target = GameObject.Find("TargetObj");
+        //target = GameObject.Find("TargetObj");
         
         MeshFilter meshFillter = target.GetComponent<MeshFilter>();
         Mesh mesh = meshFillter.mesh;

@@ -6,72 +6,40 @@ using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class LoadModel : MonoBehaviour
 {
-    const int size = 5;
+    const int size = 6;
 
     string v_path;
     [HideInInspector]
-    public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail" }; //When you figure out the skeleton Loading, add in a skeleton here
-    List<string>[] v_objList = new List<string>[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
-    GameObject[] currentActive = new GameObject[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail
+    public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail", "Frame" }; //When you figure out the skeleton Loading, add in a skeleton here
+    List<string>[] v_objList = new List<string>[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail, Frame
+    GameObject[] currentActive = new GameObject[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail, Frame
     public List<string> modelList = new List<string>();
 
-    //public GameObject aircraftSelect;
-    void Start()
+    private void Start()
     {
-        v_path = (Application.dataPath + "/Resources");
-
-        for (int i = 0; i< v_objList.Length; i++) { v_objList[i] = new List<string>(); } //Initialises the lists of .fbx available
-
-
-        for(int s = 0; s< v_objList.Length; s++) //Stores the names of all of the models in their respecive directories
+        v_path = (Application.dataPath + "/Resources/Aircraft/");
+        string[] temp = Directory.GetFiles(v_path, "*.fbx");
+        for(int i =0; i< temp.Length; i++)
         {
-            string[] temp = Directory.GetFiles(v_path + "/" + nameOf[s], "*.fbx");
-            for (int i = 0;i < temp.Length; i++) { temp[i] = Path.GetFileName(temp[i]); }
-
-            foreach (string r in temp) {
-                if (s > 0)
-                {
-                    foreach (string e in v_objList[0])
-                    {
-                        if (e.Split('.')[0] == r.Split('.')[0] && (r.Split('.')[1] == nameOf[s]))
-                        {
-                            v_objList[s].Add(Path.GetFileName(r));
-                            break;
-                        }
-                    }
-                }
-                else if (r.Split('.')[1] == nameOf[s])
-                { 
-                    v_objList[s].Add(Path.GetFileName(r));
-                }
-            }
+            temp[i] = Path.GetFileName(temp[i]);
+            temp[i] = temp[i].Split('.')[0];
         }
+        modelList.AddRange(temp);
+        
+        /////ERROR CHECKING
+        /*                                                        foreach(string s in modelList)
+                                                                {
+                                                                    GameObject check = Resources.Load<GameObject>(v_path + s) as GameObject;
+                                                                    if(check.transform.childCount != nameOf.Length || Array.IndexOf(nameOf, s) < 0)
+                                                                    {
+                                                                        modelList.Remove(s);
+                                                                    }
+                                                                }*/
 
-        List<string> temp2 = v_objList[0];
-        foreach (string p in temp2) //Clears out any models which do not exist in all directories
-        {
-            int x = 0;
-            for (int i = 1; i < v_objList.Length; i++)
-            {
-                x+=Convert.ToInt16(v_objList[i].Find(q => q.Split('.')[0] == p.Split('.')[0]) != null);
-            }
-            if (x != v_objList.Length - 1)
-            {
-                for (int i = 0; i < v_objList.Length; i++)
-                {
-                    try { v_objList[i].RemoveAt(v_objList[i].FindIndex(q => q.Split('.')[0] == p.Split('.')[0])); }
-                    catch { }
-                }
-            }
-            else
-            {
-                modelList.Add(p.Split('.')[0]);
-            }
-        }
-        //swapModel(modelList[0]);
     }
 
     public GameObject loadViewModel(string modelName, int region, Vector3 location)

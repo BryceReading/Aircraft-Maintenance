@@ -13,22 +13,6 @@ using System.Collections.Generic;
 using UnityEditor.Build.Content;
 using System;
 
-/*class GetFilesBeforeBuild : IPreprocessBuildWithReport
-{
-    public int callbackOrder { get { return 0; } }
-    Queue<GameObject[]> files = new Queue<GameObject[]>();
-    public void OnPreprocessBuild(BuildReport report)
-    {
-        files.Enqueue(Resources.LoadAll<GameObject>("Cockpit"));
-        files.Enqueue(Resources.LoadAll<GameObject>("DropDoor"));
-        files.Enqueue(Resources.LoadAll<GameObject>("MainDoor"));
-        files.Enqueue(Resources.LoadAll<GameObject>("RotorEngine"));
-        files.Enqueue(Resources.LoadAll<GameObject>("Tail"));
-        files.Enqueue(Resources.LoadAll<GameObject>("Skeleton"));
-
-    }
-}*/
-
 
 class CreateFolderOnBuild : IPostprocessBuildWithReport
 {
@@ -44,21 +28,11 @@ class CreateFolderOnBuild : IPostprocessBuildWithReport
 
         string resourcesFolder = Path.Combine(splitPath[0], "Resources");
         string editorPath = Application.dataPath + "/Resources/";
+
         if (Directory.Exists(editorPath))
         {
-            string newFolder = Path.Combine(resourcesFolder, "Cockpit/");
-            string[] files = Directory.GetFiles(editorPath+"Cockpit");
-            Directory.CreateDirectory(newFolder);
-            foreach (string s in files) 
-            {
-                if (s.Split('.')[s.Split('.').Length - 1] != "meta")
-                {
-                    File.Copy(s, newFolder + Path.GetFileName(s), true);
-                }
-            }
-
-            newFolder = Path.Combine(resourcesFolder, "DropDoor/");
-            files = Directory.GetFiles(editorPath + "DropDoor");
+            string[] files = Directory.GetFiles(editorPath + "Aircraft");
+            string newFolder = Path.Combine(resourcesFolder, "Aircraft/");
             Directory.CreateDirectory(newFolder);
             foreach (string s in files)
             {
@@ -67,50 +41,7 @@ class CreateFolderOnBuild : IPostprocessBuildWithReport
                     File.Copy(s, newFolder + Path.GetFileName(s), true);
                 }
             }
-
-            newFolder = Path.Combine(resourcesFolder, "MainDoor/");
-            files = Directory.GetFiles(editorPath + "MainDoor");
-            Directory.CreateDirectory(newFolder);
-            foreach (string s in files)
-            {
-                if (s.Split('.')[s.Split('.').Length - 1] != "meta")
-                {
-                    File.Copy(s, newFolder + Path.GetFileName(s), true);
-                }
-            }
-
-            newFolder = Path.Combine(resourcesFolder, "RotorEngine/");
-            files = Directory.GetFiles(editorPath + "RotorEngine");
-            Directory.CreateDirectory(newFolder);
-            foreach (string s in files)
-            {
-                if (s.Split('.')[s.Split('.').Length - 1] != "meta")
-                {
-                    File.Copy(s, newFolder + Path.GetFileName(s), true);
-                }
-            }
-
-            newFolder = Path.Combine(resourcesFolder, "Tail/");
-            files = Directory.GetFiles(editorPath + "Tail");
-            Directory.CreateDirectory(newFolder);
-            foreach (string s in files)
-            {
-                if (s.Split('.')[s.Split('.').Length - 1] != "meta")
-                {
-                    File.Copy(s, newFolder + Path.GetFileName(s), true);
-                }
-            }
-
-            newFolder = Path.Combine(resourcesFolder, "Skeleton/");
-            files = Directory.GetFiles(editorPath + "Skeleton");
-            Directory.CreateDirectory(newFolder);
-            foreach (string s in files)
-            {
-                if (s.Split('.')[s.Split('.').Length - 1] != "meta")
-                {
-                    File.Copy(s, newFolder + Path.GetFileName(s), true);
-                }
-            }
+            File.Copy(Path.Combine(editorPath + "README.txt"), newFolder + "README.txt", true);
         }
     }
 }

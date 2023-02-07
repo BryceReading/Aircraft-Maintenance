@@ -29,18 +29,20 @@ public class AircraftSelect : MonoBehaviour
     //Goes to next model
     public void Next()
     {
-        if (!AUIL.CheckLoop(AUIL.currentModel + 1))
+        int model = AUIL.CheckLoop(AUIL.currentModel + 1);
+        if (model != AUIL.currentModel)
         {
-            AUIL.loadViews2(AUIL.currentModel++);
+            AUIL.loadViews2(model);
         }
     }
 
     //Goes to previous model
     public void Previous()
     {
-        if (!AUIL.CheckLoop(AUIL.currentModel - 1))
+        int model = AUIL.CheckLoop(AUIL.currentModel - 1);
+        if (model != AUIL.currentModel)
         {
-            AUIL.loadViews2(AUIL.currentModel--);
+            AUIL.loadViews2(model);
         }
     }
 }
