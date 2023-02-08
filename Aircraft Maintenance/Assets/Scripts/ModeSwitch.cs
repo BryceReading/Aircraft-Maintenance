@@ -6,10 +6,14 @@ public class ModeSwitch : MonoBehaviour
 {
     public GameObject FPS_cam;
     public GameObject Fixed_cam;
+    public Transform Fixed_transform;
+    public Transform FPS_transform;
     public int mode = 0;
 
-    public UI FPSUI;
-    public UI FixedUI;
+    public Canvas Menu;
+    public Canvas Settings;
+    public Canvas AircraftSelect;
+    public Canvas Help;
 
     private void Start()
     {
@@ -24,17 +28,6 @@ public class ModeSwitch : MonoBehaviour
         if (mode == 1) mode = 0;
         else mode += 1;
 
-        if(FPSUI.settings.enabled == true)
-        {
-            FPSUI.settings.enabled = false;
-            FixedUI.settings.enabled = true;
-        }
-        else if(FixedUI.settings.enabled == true)
-        {
-            FPSUI.settings.enabled = true;
-            FixedUI.settings.enabled = false;
-        }
-
         StartCoroutine(SwitchCam());
     }
     
@@ -42,16 +35,27 @@ public class ModeSwitch : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         
-         if (mode == 0)
-         {
-              FPS_cam.SetActive(true);
-              Fixed_cam.SetActive(false);
-         }
+        if (mode == 0)
+        {
+            FPS_cam.SetActive(true);
+            Fixed_cam.SetActive(false);
+
+            Menu.transform.SetParent(FPS_transform);
+            Settings.transform.SetParent(FPS_transform);
+            AircraftSelect.transform.SetParent(FPS_transform);
+            Help.transform.SetParent(FPS_transform);
+        }
         else if (mode == 1)
         {
             Fixed_cam.SetActive(true);
             FPS_cam.SetActive(false);
+
+            Menu.transform.SetParent(Fixed_transform);
+            Settings.transform.SetParent(Fixed_transform);
+            AircraftSelect.transform.SetParent(Fixed_transform);
+            Help.transform.SetParent(Fixed_transform);
         }
+
         Time.timeScale = 0;
     }
 }
