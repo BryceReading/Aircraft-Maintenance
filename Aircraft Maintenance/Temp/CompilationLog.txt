@@ -1,0 +1,76 @@
+# Starting compiling UnityEngine.TestRunner.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-2c8df99e05e87b246acb83298c6e4de5
+# Starting compiling UnityEngine.UI.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ca6a46db73e7d824ebbdf7f60da33967
+# Starting compiling UnityEditor.TestRunner.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-1540b6226a601ed41ae79266edc92b53
+# Starting compiling UnityEditor.UI.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-779427a82e0112b4eac76a4d695a9d76
+# Starting compiling Unity.VSCode.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-4869a11802b804f4bb2cf4e1d9d53c9c
+# Starting compiling Unity.RenderPipelines.Universal.Shaders.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-ebcb841e5508d5549ae6b2f030e0909b
+# Starting compiling Unity.VisualStudio.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-06258fbbb9defd44f90ba2d9aab06740
+# Starting compiling Unity.Timeline.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-a35bf425ef18f2241b17340200db597e
+# Starting compiling Unity.TextMeshPro.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-97c503bdfc21e054a96256943c3cde95
+# Starting compiling Unity.Searcher.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-9b822b552d04741409e97c906d761b0a
+# Starting compiling Unity.ShaderGraph.Utilities.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-8f77855ac1c33d642bf01ae815ff1cbc
+# Starting compiling Unity.InputSystem.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-f88eced4b9242e641bd0c2c0f6d04646
+# Starting compiling Unity.Rider.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-42df0f7a97e6c3147a9c8f7495270da6
+# Starting compiling Unity.RenderPipelines.Core.ShaderLibrary.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-cb886f3da1ae9b041bede721681e6604
+# Starting compiling UnityEngine.SpatialTracking.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-2ec1dd30ee7e1f94ab089ebb5f7e9ea0
+# Starting compiling Unity.PlasticSCM.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-2dec7ba1bbbd0df43b5929755074d74d
+# Starting compiling Unity.Mathematics.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-03387a13d6351ca4f9da5c2473609b3a
+# Starting compiling Unity.Services.Core.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-bff3c3f7283ab7b42b9a6c1f70d18735
+# Starting compiling UnityEngine.XR.LegacyInputHelpers.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-12d6166e953700941990e8ff9633f74c
+# Starting compiling Unity.TextMeshPro.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-6b2c9a8e54634f14dbe3540b32ae6880
+# Starting compiling Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-80f7cb9fa8589cd4887a7e94997b4170
+# Starting compiling Unity.Timeline.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-0aabee4a888551c4da377ea3ab24fdc9
+# Starting compiling UnityEditor.SpatialTracking.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-f1b76b81717e4c94a9b09350f1eb2a50
+# Starting compiling Unity.RenderPipelines.Core.Runtime.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-a9bfe05bad99de44797290ae56a1693e
+# Starting compiling Unity.XR.CoreUtils.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-96a88d39b7a004b48be76f2229ed7f65
+# Starting compiling Unity.CollabProxy.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-1609bb614bc876444a5064d6bafa2ba6
+# Starting compiling Unity.XR.Interaction.Toolkit.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-5d7927955e4365f448862fd2acf0d638
+# Starting compiling Unity.ShaderGraph.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-76314533522abe1419fe3cf945f3a4e5
+# Starting compiling Unity.XR.CoreUtils.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-14596aca1e83b7a4aade197a58a887ce
+# Starting compiling Unity.RenderPipeline.Universal.ShaderLibrary.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-248644e9c3f04aa4d88b46d9b3651183
+# Starting compiling Unity.Mathematics.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-a5a0327f984efb648b26edbe327bb6b9
+# Starting compiling Unity.RenderPipelines.Core.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-fe66413864927a440a1b00bc382d7763
+# Starting compiling Unity.RenderPipelines.Universal.Runtime.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-e565e95735098fa4e9bdf7a5f899ded1
+# Starting compiling Unity.XR.Interaction.Toolkit.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-27171dbf3fe9c1447b88dafe7ee2be1d
+# Starting compiling UnityEditor.XR.LegacyInputHelpers.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-18ac7ad1cd0f62f448c5948426f81af4
+# Starting compiling Unity.RenderPipelines.Universal.Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-e0ea175dccb4ba040bdaf9abd1b68eb5
+# Starting compiling Assembly-CSharp.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-b0ea9c2bfa3146144a4eb73ec93d3295
+# Starting compiling Assembly-CSharp-Editor.dll
+E:\Uni Work\YEAR TWO\Teaching Block One\Gameplay Programming\Raycasting\2020.3.25f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-a557b687ae4b4dc4dbacb510fb296922

@@ -1,4 +1,4 @@
-  using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,13 +9,15 @@ using UnityEngine;
 
 public class WeaponSwap : MonoBehaviour
 {
-    public GameObject tablet;
+    GameObject tablet;
+    Animator animator;
+    bool active = false;
 
     // Start is called before the first frame update
     void Start()
     {
         tablet = GameObject.Find("Tablet");
-        tablet.SetActive(false);
+        animator = tablet.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,15 +31,18 @@ public class WeaponSwap : MonoBehaviour
 
     void Open()
     {
-        if (tablet.gameObject.activeInHierarchy)
+        if (active == false)
         {
-            tablet.SetActive(false);
+            animator.SetTrigger("Raise Tablet");
+            active = true;
         }
         else
         {
-            tablet.SetActive(true);
+            animator.SetTrigger("Lower Tablet");
+            active = false;
         }
     }
+       
 }
 
 /*
@@ -81,5 +86,16 @@ public class WeaponSwap : MonoBehaviour
             i++;
         }
     }
+
+if (tablet.gameObject.activeInHierarchy)
+        {
+            //tablet.SetActive(false);
+            animator.SetTrigger("Lower Tablet");
+        }
+        else
+        {
+           // tablet.SetActive(true);
+            animator.SetTrigger("Raise Tablet");
+        }
 *
 */
