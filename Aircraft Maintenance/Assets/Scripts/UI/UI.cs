@@ -12,7 +12,8 @@ public class UI : MonoBehaviour
     public Canvas aircraftSelect;
     public Canvas removeModels;
 
-    bool paused = false;
+    [SerializeField]
+    public bool paused = false;
 
     void Update()
     {
@@ -22,6 +23,7 @@ public class UI : MonoBehaviour
             menu.enabled = true;
             removeModels.enabled = false;
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
             paused = true;
         }
     }
@@ -31,8 +33,9 @@ public class UI : MonoBehaviour
     {
         menu.enabled = false;
         Time.timeScale = 1;
-        paused = false;
         removeModels.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        paused = false;
     }
 
     //Goes to settings
