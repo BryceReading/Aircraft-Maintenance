@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: Tablet
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: 'Raise Tablet '
+  - m_Name: Raise Tablet
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -148,7 +148,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: 'Raise Tablet '
+    m_ConditionEvent: Raise Tablet
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4074265928338187289}
