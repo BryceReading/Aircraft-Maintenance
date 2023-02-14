@@ -11,13 +11,14 @@ public class WeaponSwap : MonoBehaviour
 {
     GameObject tablet;
     Animator animator;
-    bool active = false;
+    bool active;
 
     // Start is called before the first frame update
     void Start()
     {
         tablet = GameObject.Find("Tablet");
         animator = tablet.GetComponent<Animator>();
+        active = false;
     }
 
     // Update is called once per frame
@@ -35,14 +36,15 @@ public class WeaponSwap : MonoBehaviour
         {
             animator.SetTrigger("Raise Tablet");
             active = true;
+            Debug.Log("Open");
         }
-        else
+        else if (active == true)
         {
             animator.SetTrigger("Lower Tablet");
             active = false;
+            Debug.Log("Close");
         }
     }
-       
 }
 
 /*
