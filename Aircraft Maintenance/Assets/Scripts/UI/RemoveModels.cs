@@ -35,7 +35,6 @@ public class RemoveModels : MonoBehaviour
         {
             cockpitBool = true;
         }
-        CockpitButton.image.fillCenter = cockpitBool;
         Cockpit.gameObject.SetActive(cockpitBool);
 
     }
@@ -51,8 +50,6 @@ public class RemoveModels : MonoBehaviour
         {
             dropDoorBool = true;
         }
-
-        DropDoorButton.image.fillCenter = dropDoorBool;
         DropDoor.gameObject.SetActive(dropDoorBool);
     }
 
@@ -67,8 +64,6 @@ public class RemoveModels : MonoBehaviour
         {
             mainDoorBool = true;
         }
-
-        MainDoorButton.image.fillCenter = mainDoorBool;
         MainDoor.gameObject.SetActive(mainDoorBool);
     }
 
@@ -83,7 +78,6 @@ public class RemoveModels : MonoBehaviour
         {
             rotorEngineBool = true;
         }
-        RotorEngineButton.image.fillCenter = rotorEngineBool;
         RotorEngine.gameObject.SetActive(rotorEngineBool);
     }
     
@@ -98,7 +92,6 @@ public class RemoveModels : MonoBehaviour
         {
             tailBool = true;
         }
-        TailButton.image.fillCenter = tailBool;
         Tail.gameObject.SetActive(tailBool);
     }
 }

@@ -6,8 +6,10 @@ public class ModeSwitch : MonoBehaviour
 {
     public GameObject FPS_cam;
     public GameObject Fixed_cam;
+
     public Transform Fixed_transform;
     public Transform FPS_transform;
+
     public int mode = 0;
 
     public Canvas Menu;

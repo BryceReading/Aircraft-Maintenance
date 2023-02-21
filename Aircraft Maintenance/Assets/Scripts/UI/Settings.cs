@@ -25,8 +25,24 @@ public class Settings : MonoBehaviour
 
     public Canvas RemoveModels;
 
+    public GameObject FixedCamera;
+    public GameObject FPSCamera;
+
+    public Transform Fixed_transform;
+    public Transform FPS_transform;
+
+    public Canvas Menu;
+    public Canvas SettingsMenu;
+    public Canvas AircraftSelect;
+    public Canvas Help;
+
     CameraChange cameraChange;
     ModeSwitch modeSwitch;
+
+    public void Start()
+    {
+        s_sound = 0.5f;
+    }
 
     //Scale the mouse sensitivity
     public void MouseSensitivity()
@@ -44,53 +60,51 @@ public class Settings : MonoBehaviour
     }
 
     //Change to Desktop Mouse controls
-    public void DesktopMouse()
+    public void DesktopFixed()
     {
-        if (s_movement == 1)
-        {
-            desktopFPS.image.fillCenter = true;
-        }
-        else if (s_movement == 2)
-        {
-            VRButton.image.fillCenter = true;
-        }
+        FixedCamera.gameObject.SetActive(true);
+        FPSCamera.gameObject.SetActive(false);
 
-        helpText.text = "Mouse Controls";
+        helpText.text = "Fixed Controls";
 
-        s_movement = 0;
+        desktopFPS.image.fillCenter = true;
+        VRButton.image.fillCenter = true;
         desktopMouse.image.fillCenter = false;
+
+        Menu.transform.SetParent(Fixed_transform);
+        SettingsMenu.transform.SetParent(Fixed_transform);
+        AircraftSelect.transform.SetParent(Fixed_transform);
+        Help.transform.SetParent(Fixed_transform);
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     //Change to Desktop Mouse controls
     public void DesktopFPS()
     {
-        if (s_movement == 0)
-        {
-            desktopMouse.image.fillCenter = true;
-        }
-        else if (s_movement == 2)
-        {
-            VRButton.image.fillCenter = true;
-        }
+        FixedCamera.gameObject.SetActive(false);
+        FPSCamera.gameObject.SetActive(true);
 
         helpText.text = "FPS Controls";
 
-        s_movement = 1;
         desktopFPS.image.fillCenter = false;
+        VRButton.image.fillCenter = true;
+        desktopMouse.image.fillCenter = true;
+
+        Menu.transform.SetParent(FPS_transform);
+        SettingsMenu.transform.SetParent(FPS_transform);
+        AircraftSelect.transform.SetParent(FPS_transform);
+        Help.transform.SetParent(FPS_transform);
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     //Change to VR controls
     public void VR()
     {
-        if (s_movement == 0)
-        {
-            desktopMouse.image.fillCenter = true;
-        }
-        else if (s_movement == 1)
-        {
-            desktopFPS.image.fillCenter = true;
-        }
-
+        desktopMouse.image.fillCenter = true;
+        desktopFPS.image.fillCenter = true;
+        
         helpText.text = "VR Controls";
 
         s_movement = 2;

@@ -13,13 +13,18 @@ public class Sound : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    void FixedUpdate()
+    {
+        audioSource.volume = settings.s_sound;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         audioSource.volume = settings.s_sound;
         audioSource.Play();
     }
 
-    void ButtonSound()
+    public void ButtonSound()
     {
         audioSource.volume = settings.s_sound;
         audioSource.Play();

@@ -36,13 +36,13 @@ public class WeaponSwap : MonoBehaviour
         {
             animator.SetTrigger("Raise Tablet");
             active = true;
-            Debug.Log("Open");
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (active == true)
         {
             animator.SetTrigger("Lower Tablet");
             active = false;
-            Debug.Log("Close");
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
