@@ -76,7 +76,7 @@ public class Settings : MonoBehaviour
         AircraftSelect.transform.SetParent(Fixed_transform);
         Help.transform.SetParent(Fixed_transform);
 
-        Cursor.lockState = CursorLockMode.None;
+       // Cursor.lockState = CursorLockMode.None;
     }
 
     //Change to Desktop Mouse controls

@@ -418,3 +418,23 @@ C# parse time         : 190ms
 candidates check time : 48ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 23/02/2023 16:12:45 : Starting E:/Uni Work/YEAR TWO/Teaching Block One/Gameplay Programming/Raycasting/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 893.328ms
+moved types parse time: 48ms
+candidates parse time : 1ms
+C# parse time         : 652ms
+candidates check time : 39ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 23/02/2023 16:56:23 : Starting E:/Uni Work/YEAR TWO/Teaching Block One/Gameplay Programming/Raycasting/2020.3.25f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 48.8685ms
+moved types parse time: 44ms
+candidates parse time : 0ms
+C# parse time         : 175ms
+candidates check time : 40ms
+console write time    : 2ms
+
