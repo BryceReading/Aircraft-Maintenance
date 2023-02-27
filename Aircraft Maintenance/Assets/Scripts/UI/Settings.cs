@@ -47,9 +47,9 @@ public class Settings : MonoBehaviour
     //Scale the mouse sensitivity
     public void MouseSensitivity()
     {
-        s_sensitivty = (mouseSensitivity.value - 80.0f) / 2;
+        s_sensitivty = (mouseSensitivity.value - 40.0f) / 500f;
         desktopCamLooking.Sense = mouseSensitivity.value;
-        mouseText.text = s_sensitivty.ToString();
+        mouseText.text = ((int)s_sensitivty).ToString();
     }
 
     //Scale the sound volume

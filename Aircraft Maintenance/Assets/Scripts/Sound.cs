@@ -13,7 +13,7 @@ public class Sound : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         audioSource.volume = settings.s_sound;
     }

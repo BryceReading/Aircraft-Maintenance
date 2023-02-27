@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 8670983}
   - component: {fileID: 8670982}
   m_Layer: 5
-  m_Name: HelpButton
+  m_Name: HelpMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 24417815}
   - component: {fileID: 24417814}
   - component: {fileID: 24417817}
+  - component: {fileID: 24417818}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -561,6 +562,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 24417818}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -704,6 +717,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &24417818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24417812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &27057981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,10 +1189,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 247933520}
   m_HandleRect: {fileID: 1928291507}
   m_Direction: 0
-  m_MinValue: 80
-  m_MaxValue: 280
+  m_MinValue: 40
+  m_MaxValue: 50040
   m_WholeNumbers: 1
-  m_Value: 180
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1406,6 +1432,7 @@ GameObject:
   - component: {fileID: 109182313}
   - component: {fileID: 109182312}
   - component: {fileID: 109182315}
+  - component: {fileID: 109182316}
   m_Layer: 5
   m_Name: DesktopFixedButton
   m_TagString: Untagged
@@ -1480,6 +1507,18 @@ MonoBehaviour:
       - m_Target: {fileID: 46509184}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: DesktopFixed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 109182316}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1623,6 +1662,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &109182316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109182310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &145410632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1688,7 @@ GameObject:
   - component: {fileID: 145410635}
   - component: {fileID: 145410634}
   - component: {fileID: 145410637}
+  - component: {fileID: 145410638}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1710,6 +1763,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 145410638}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1853,6 +1918,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &145410638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145410632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &158609948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1980,7 @@ GameObject:
   - component: {fileID: 237058527}
   - component: {fileID: 237058526}
   - component: {fileID: 237058529}
+  - component: {fileID: 237058530}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -1976,6 +2055,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 237058530}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2119,6 +2210,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &237058530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237058524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &247933519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2834,7 @@ GameObject:
   - component: {fileID: 362605881}
   - component: {fileID: 362605882}
   - component: {fileID: 362605884}
+  - component: {fileID: 362605885}
   m_Layer: 5
   m_Name: Tail
   m_TagString: Untagged
@@ -2804,6 +2909,18 @@ MonoBehaviour:
       - m_Target: {fileID: 971337810}
         m_TargetAssemblyTypeName: RemoveModels, Assembly-CSharp
         m_MethodName: RemoveTail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 362605885}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2944,6 +3061,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &362605885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362605879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &387116980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3450,7 @@ GameObject:
   - component: {fileID: 440743993}
   - component: {fileID: 440743992}
   - component: {fileID: 440743995}
+  - component: {fileID: 440743996}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -3394,6 +3525,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 440743996}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3537,6 +3680,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &440743996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440743990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &472631216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4144,7 @@ GameObject:
   - component: {fileID: 535953026}
   - component: {fileID: 535953027}
   - component: {fileID: 535953029}
+  - component: {fileID: 535953030}
   m_Layer: 5
   m_Name: Cockpit
   m_TagString: Untagged
@@ -4062,6 +4219,18 @@ MonoBehaviour:
       - m_Target: {fileID: 971337810}
         m_TargetAssemblyTypeName: RemoveModels, Assembly-CSharp
         m_MethodName: RemoveCockpit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 535953030}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4202,6 +4371,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &535953030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535953024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &554346437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,6 +4397,7 @@ GameObject:
   - component: {fileID: 554346439}
   - component: {fileID: 554346440}
   - component: {fileID: 554346442}
+  - component: {fileID: 554346443}
   m_Layer: 5
   m_Name: Main Door
   m_TagString: Untagged
@@ -4289,6 +4472,18 @@ MonoBehaviour:
       - m_Target: {fileID: 971337810}
         m_TargetAssemblyTypeName: RemoveModels, Assembly-CSharp
         m_MethodName: RemoveMainDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 554346443}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4429,6 +4624,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &554346443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554346437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &593170428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4858,6 +5066,8 @@ GameObject:
   - component: {fileID: 717982893}
   - component: {fileID: 717982892}
   - component: {fileID: 717982891}
+  - component: {fileID: 717982894}
+  - component: {fileID: 717982895}
   m_Layer: 5
   m_Name: Load Button
   m_TagString: Untagged
@@ -4928,7 +5138,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 717982892}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 717982894}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &717982892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,6 +5189,115 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717982889}
   m_CullTransparentMesh: 1
+--- !u!114 &717982894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717982889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
+--- !u!82 &717982895
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717982889}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5a2b3a8d8c71b3a46a0a8fb4952199bd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &754036045
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,6 +6021,7 @@ GameObject:
   - component: {fileID: 814198675}
   - component: {fileID: 814198674}
   - component: {fileID: 814198677}
+  - component: {fileID: 814198678}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -5764,6 +6096,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 814198678}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5907,6 +6251,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &814198678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814198672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &850340589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,7 +6308,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd7fcea530694f541af1f6092a11e611, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eec2b9a3637af0341b2d98c22384049a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -6063,6 +6420,7 @@ GameObject:
   - component: {fileID: 856367310}
   - component: {fileID: 856367309}
   - component: {fileID: 856367312}
+  - component: {fileID: 856367313}
   m_Layer: 5
   m_Name: VRButton
   m_TagString: Untagged
@@ -6137,6 +6495,18 @@ MonoBehaviour:
       - m_Target: {fileID: 46509184}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: VR
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 856367313}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6280,6 +6650,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &856367313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856367307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &902594828
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,7 +6876,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd7fcea530694f541af1f6092a11e611, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eec2b9a3637af0341b2d98c22384049a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -7348,6 +7731,7 @@ GameObject:
   - component: {fileID: 1192495910}
   - component: {fileID: 1192495909}
   - component: {fileID: 1192495912}
+  - component: {fileID: 1192495913}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -7422,6 +7806,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1709112482}
         m_TargetAssemblyTypeName: AircraftSelect, Assembly-CSharp
         m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1192495913}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7565,6 +7961,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1192495913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192495907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &1198553418
 GameObject:
   m_ObjectHideFlags: 0
@@ -7969,6 +8378,7 @@ GameObject:
   - component: {fileID: 1285626262}
   - component: {fileID: 1285626261}
   - component: {fileID: 1285626264}
+  - component: {fileID: 1285626265}
   m_Layer: 5
   m_Name: DesktopFPSButton
   m_TagString: Untagged
@@ -8043,6 +8453,18 @@ MonoBehaviour:
       - m_Target: {fileID: 46509184}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: DesktopFPS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1285626265}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8186,6 +8608,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1285626265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285626259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &1466543378
 GameObject:
   m_ObjectHideFlags: 0
@@ -9419,6 +9854,7 @@ GameObject:
   - component: {fileID: 1579598036}
   - component: {fileID: 1579598035}
   - component: {fileID: 1579598038}
+  - component: {fileID: 1579598039}
   m_Layer: 5
   m_Name: AircraftSelectButton
   m_TagString: Untagged
@@ -9506,6 +9942,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AircraftUILoading, Assembly-CSharp
         m_MethodName: loadViews2
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579598039}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9648,6 +10096,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1579598039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579598033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &1633491476
 GameObject:
   m_ObjectHideFlags: 0
@@ -10307,6 +10768,7 @@ GameObject:
   - component: {fileID: 1811023736}
   - component: {fileID: 1811023737}
   - component: {fileID: 1811023739}
+  - component: {fileID: 1811023740}
   m_Layer: 5
   m_Name: Drop Door
   m_TagString: Untagged
@@ -10381,6 +10843,18 @@ MonoBehaviour:
       - m_Target: {fileID: 971337810}
         m_TargetAssemblyTypeName: RemoveModels, Assembly-CSharp
         m_MethodName: RemoveDropDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1811023740}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10521,6 +10995,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1811023740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811023734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &1823179211
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,6 +11411,7 @@ GameObject:
   - component: {fileID: 1954780725}
   - component: {fileID: 1954780726}
   - component: {fileID: 1954780728}
+  - component: {fileID: 1954780729}
   m_Layer: 5
   m_Name: Rotor Engine
   m_TagString: Untagged
@@ -10998,6 +11486,18 @@ MonoBehaviour:
       - m_Target: {fileID: 971337810}
         m_TargetAssemblyTypeName: RemoveModels, Assembly-CSharp
         m_MethodName: RemoveRotorEngine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1954780729}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11138,6 +11638,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1954780729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954780723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &1987729756
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,6 +11968,7 @@ GameObject:
   - component: {fileID: 2009770358}
   - component: {fileID: 2009770357}
   - component: {fileID: 2009770360}
+  - component: {fileID: 2009770361}
   m_Layer: 5
   m_Name: Previous
   m_TagString: Untagged
@@ -11529,6 +12043,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1709112482}
         m_TargetAssemblyTypeName: AircraftSelect, Assembly-CSharp
         m_MethodName: Previous
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2009770361}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11672,6 +12198,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2009770361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009770355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &2021121879
 GameObject:
   m_ObjectHideFlags: 0
@@ -11780,6 +12319,7 @@ GameObject:
   - component: {fileID: 2022100814}
   - component: {fileID: 2022100813}
   - component: {fileID: 2022100816}
+  - component: {fileID: 2022100817}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -11854,6 +12394,18 @@ MonoBehaviour:
       - m_Target: {fileID: 91708853}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: SettingsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2022100817}
+        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11997,6 +12549,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2022100817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022100811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d741d1b5b2f2b4fa040ea2d0d53f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 46509184}
 --- !u!1 &2033683291
 GameObject:
   m_ObjectHideFlags: 0
