@@ -11,7 +11,7 @@ public class CameraChange : MonoBehaviour
 
     bool paused; 
     
-    UI FC_ui;
+    public UI FC_ui;
 
     void Start()
     {
@@ -27,6 +27,10 @@ public class CameraChange : MonoBehaviour
 
     void Update()
     {
+        if(FC_ui == null)
+        {
+            
+        }
         RotateCam();
 
         // change speed with scroll wheel
@@ -51,10 +55,10 @@ public class CameraChange : MonoBehaviour
             transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y") * FC_speed * 10 * Time.deltaTime, Space.World);
 
         }
-        
+
         // Lock mouse movment while the user is looking around but let it be usable when they need to click on the screen   
-        if (FC_ui.menu.enabled == false) Cursor.lockState = CursorLockMode.Locked;
-        else { Cursor.lockState = CursorLockMode.None; }
+        if (FC_ui.globalEnabled == true) { Cursor.lockState = CursorLockMode.None; }
+        else { Cursor.lockState = CursorLockMode.Locked; }
 
         // lock Z rotation of camera
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);

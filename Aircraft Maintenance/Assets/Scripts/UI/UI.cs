@@ -10,8 +10,8 @@ public class UI : MonoBehaviour
     public Canvas settings;
     public Canvas help;
     public Canvas aircraftSelect;
-    public Canvas removeModels;
-
+    public bool globalEnabled = false;
+    public WeaponSwap weaponSwap;
     [SerializeField]
     public bool paused = false;
 
@@ -20,8 +20,8 @@ public class UI : MonoBehaviour
         //Gets menu up
         if (paused == false && Input.GetKeyDown(KeyCode.Escape))
         {
+            globalEnabled = true;
             menu.enabled = true;
-            removeModels.enabled = false;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             paused = true;
@@ -31,10 +31,13 @@ public class UI : MonoBehaviour
     //Menu closes
     public void Resume()
     {
+        globalEnabled = false;
         menu.enabled = false;
         Time.timeScale = 1;
-        removeModels.enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (weaponSwap.active == false)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         paused = false;
     }
 
@@ -72,19 +75,10 @@ public class UI : MonoBehaviour
     //Goes back, should go back to the menu
     public void Back()
     {
-        if(help.enabled == true)
-        {
-            help.enabled = false;
-        }
-        else if(settings.enabled == true)
-        {
-            settings.enabled = false;
-        }
-        else if(aircraftSelect.enabled == true)
-        {
-            aircraftSelect.enabled = false;
-        }
-
+        help.enabled = false;
+        settings.enabled = false;
+        aircraftSelect.enabled = false;
+        
         menu.enabled = true;
     }
 

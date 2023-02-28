@@ -11,7 +11,7 @@ public class WeaponSwap : MonoBehaviour
 {
     GameObject tablet;
     Animator animator;
-    bool active;
+    public bool active;
 
     // Start is called before the first frame update
     void Start()
