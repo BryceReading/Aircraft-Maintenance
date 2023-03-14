@@ -11,12 +11,15 @@ public class WeaponSwap : MonoBehaviour
 {
     GameObject tablet;
     Animator animator;
+
     public bool active;
+
+    public UI ui;
 
     // Start is called before the first frame update
     void Start()
     {
-        tablet = GameObject.Find("Tablet");
+        tablet = GameObject.Find("Tablet3");
         animator = tablet.GetComponent<Animator>();
         active = false;
     }
@@ -30,19 +33,23 @@ public class WeaponSwap : MonoBehaviour
         }
     }
 
-    void Open()
+    public void Open()
     {
         if (active == false)
         {
             animator.SetTrigger("Raise Tablet");
             active = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            ui.toolTip.enabled = false;
         }
         else if (active == true)
         {
             animator.SetTrigger("Lower Tablet");
             active = false;
             Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            ui.toolTip.enabled = true;
         }
     }
 }

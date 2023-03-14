@@ -38,7 +38,6 @@ public class Settings : MonoBehaviour
 
     CameraChange cameraChange;
     ModeSwitch modeSwitch;
-
     public void Start()
     {
         s_sound = 0.5f;
@@ -76,7 +75,7 @@ public class Settings : MonoBehaviour
         AircraftSelect.transform.SetParent(Fixed_transform);
         Help.transform.SetParent(Fixed_transform);
 
-       // Cursor.lockState = CursorLockMode.None;
+        
     }
 
     //Change to Desktop Mouse controls
@@ -85,7 +84,14 @@ public class Settings : MonoBehaviour
         FixedCamera.gameObject.SetActive(false);
         FPSCamera.gameObject.SetActive(true);
 
-        helpText.text = "FPS Controls";
+        helpText.text = "FPS Controls\n" +
+            "W- Forwards\n" +
+            "A- Left\n" +
+            "S- Backwards\n" +
+            "D- Right\n" +
+            "Mouse- Looking around\n" +
+            "Escape- Pause/Unpause\n" +
+            "E- Raise/Lower Tablet";
 
         desktopFPS.image.fillCenter = false;
         VRButton.image.fillCenter = true;

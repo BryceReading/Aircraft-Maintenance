@@ -10,6 +10,8 @@ public class UI : MonoBehaviour
     public Canvas settings;
     public Canvas help;
     public Canvas aircraftSelect;
+    public Canvas toolTip;
+
     public bool globalEnabled = false;
     public WeaponSwap weaponSwap;
     [SerializeField]
@@ -25,6 +27,11 @@ public class UI : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             paused = true;
+            toolTip.enabled = false;
+        }
+        else if(paused == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Resume();
         }
     }
 
@@ -33,10 +40,11 @@ public class UI : MonoBehaviour
     {
         globalEnabled = false;
         menu.enabled = false;
-        Time.timeScale = 1;
         if (weaponSwap.active == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            toolTip.enabled = true;
         }
         paused = false;
     }
@@ -61,16 +69,6 @@ public class UI : MonoBehaviour
         menu.enabled = false;
         aircraftSelect.enabled = true;
     }
-
-    //Goes to the SampleScene
-    //public void SampleScene()
-    //{
-    //    SceneManager.LoadScene("SampleScene");
-    //    aircraftSelect.enabled = false;
-    //    Time.timeScale = 1;
-    //    paused = false;
-    //    removeModels.enabled = true;
-    //}
 
     //Goes back, should go back to the menu
     public void Back()
