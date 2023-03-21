@@ -10,7 +10,6 @@ public class UI : MonoBehaviour
     public Canvas settings;
     public Canvas help;
     public Canvas aircraftSelect;
-    public Canvas toolTip;
 
     public bool globalEnabled = false;
     public WeaponSwap weaponSwap;
@@ -27,11 +26,13 @@ public class UI : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             paused = true;
-            toolTip.enabled = false;
         }
         else if(paused == true && Input.GetKeyDown(KeyCode.Escape))
         {
             Resume();
+            aircraftSelect.enabled = false;
+            help.enabled = false;
+            settings.enabled = false;
         }
     }
 
@@ -44,7 +45,6 @@ public class UI : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
-            toolTip.enabled = true;
         }
         paused = false;
     }

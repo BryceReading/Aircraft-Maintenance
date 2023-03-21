@@ -41,7 +41,6 @@ public class WeaponSwap : MonoBehaviour
             active = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
-            ui.toolTip.enabled = false;
         }
         else if (active == true)
         {
@@ -49,7 +48,6 @@ public class WeaponSwap : MonoBehaviour
             active = false;
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
-            ui.toolTip.enabled = true;
         }
     }
 }
