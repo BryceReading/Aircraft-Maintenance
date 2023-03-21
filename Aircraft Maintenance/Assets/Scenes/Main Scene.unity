@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.49600944, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4399,15 +4399,14 @@ MonoBehaviour:
 
     S- Backwards
 
-    D-
-    Right
+    D- Right
 
-    Mouse- Looking around
+    Mouse-
+    Looking around
 
     Escape- Pause/Unpause
 
-    E- Raise/Lower
-    Tablet'
+    E- Raise/Lower Tablet'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5951,7 +5950,6 @@ GameObject:
   - component: {fileID: 850340590}
   - component: {fileID: 850340591}
   - component: {fileID: 850340592}
-  - component: {fileID: 850340593}
   m_Layer: 0
   m_Name: Fixed Camera Mode
   m_TagString: Untagged
@@ -6084,23 +6082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 46509184}
---- !u!114 &850340593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850340589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d1cfbcf03daca438ec40e2ac8f1997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FC_smooth: 0.2
-  FC_dist: 5
-  FC_target: {fileID: 0}
-  FC_speed: 0
-  FC_ui: {fileID: 0}
 --- !u!1 &856367307
 GameObject:
   m_ObjectHideFlags: 0
@@ -12834,6 +12815,7 @@ GameObject:
   - component: {fileID: 2033683294}
   - component: {fileID: 2033683293}
   - component: {fileID: 2033683292}
+  - component: {fileID: 2033683296}
   m_Layer: 0
   m_Name: FixedCamera
   m_TagString: Untagged
@@ -12940,6 +12922,23 @@ Transform:
   m_Father: {fileID: 850340590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033683296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033683291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1cfbcf03daca438ec40e2ac8f1997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FC_smooth: 0.2
+  FC_dist: 5
+  FC_target: {fileID: 807441377}
+  FC_speed: 0
+  FC_ui: {fileID: 0}
 --- !u!1 &2084322196
 GameObject:
   m_ObjectHideFlags: 0
