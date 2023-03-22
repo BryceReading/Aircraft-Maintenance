@@ -1,199 +1,125 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 7987 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 15789 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Users\Bryce Reading\OneDrive\Documents\DOCUMENTS\Personal\Unity-GamePlayPrograming-main\2020.3.25f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Bryce Reading/Downloads/Aircraft-Maintenance/Aircraft Maintenance
+C:/Users/Matthew/OneDrive/Documents/GitHub/Aircraft-Maintenance/Aircraft Maintenance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53340
-Successfully changed project path to: C:/Users/Bryce Reading/Downloads/Aircraft-Maintenance/Aircraft Maintenance
-C:/Users/Bryce Reading/Downloads/Aircraft-Maintenance/Aircraft Maintenance
+58862
+Successfully changed project path to: C:/Users/Matthew/OneDrive/Documents/GitHub/Aircraft-Maintenance/Aircraft Maintenance
+C:/Users/Matthew/OneDrive/Documents/GitHub/Aircraft-Maintenance/Aircraft Maintenance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 97.81 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path C:/Users/Bryce Reading/OneDrive/Documents/DOCUMENTS/Personal/Unity-GamePlayPrograming-main/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Bryce Reading/Downloads/Aircraft-Maintenance/Aircraft Maintenance/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Matthew/OneDrive/Documents/GitHub/Aircraft-Maintenance/Aircraft Maintenance/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics (ID=0x8a56)
+    Renderer: NVIDIA GeForce RTX 2060 with Max-Q Design (ID=0x1f12)
     Vendor:   
-    VRAM:     3993 MB
-    Driver:   27.20.100.9664
+    VRAM:     5980 MB
+    Driver:   30.0.15.1278
 Initialize mono
-Mono path[0] = 'C:/Users/Bryce Reading/OneDrive/Documents/DOCUMENTS/Personal/Unity-GamePlayPrograming-main/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Users/Bryce Reading/OneDrive/Documents/DOCUMENTS/Personal/Unity-GamePlayPrograming-main/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Users/Bryce Reading/OneDrive/Documents/DOCUMENTS/Personal/Unity-GamePlayPrograming-main/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56048
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Users/Bryce Reading/OneDrive/Documents/DOCUMENTS/Personal/Unity-GamePlayPrograming-main/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001719 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001819 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 112.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 69.02 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.915 seconds
+- Completed reload, in  0.641 seconds
 Domain Reload Profiling:
-	ReloadAssembly (916ms)
-		BeginReloadAssembly (64ms)
+	ReloadAssembly (642ms)
+		BeginReloadAssembly (49ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (755ms)
-			LoadAssemblies (62ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (518ms)
+			LoadAssemblies (48ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (235ms)
+			SetupTypeCache (166ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (312ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (219ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (113ms)
-				BeforeProcessingInitializeOnLoad (18ms)
-				ProcessInitializeOnLoadAttributes (138ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				RefreshPlugins (69ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (99ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005329 seconds.
+Registered in 0.005991 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000290787E9030 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290755EE0B0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074E96360 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074B84CA0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290751E5020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078AC8020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029075009010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077529230 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907880B040 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290773D3020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290773D3020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077401230 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077E25020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077F68270 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907880B040 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029075009010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290756D8010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.InputSystem.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029075204430 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074B864A0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907527B010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074CA4A70 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290770C5010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077C5C020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077B26020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074FF5030 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029075204430 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290770C5010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290753A4260 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074B860A0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074B84EA0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290770C5010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078C2C020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074CA4A70 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029075289020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074F49E10 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907765D010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290750FC030 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907765D010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
+Symbol file data-0000018F7FAF5E20 doesn't match image C:\Users\Matthew\OneDrive\Documents\GitHub\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 92.57 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 65.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.981 seconds
+- Completed reload, in  1.306 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1983ms)
-		BeginReloadAssembly (198ms)
+	ReloadAssembly (1308ms)
+		BeginReloadAssembly (184ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (1697ms)
-			LoadAssemblies (142ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1055ms)
+			LoadAssemblies (106ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (581ms)
+			SetupTypeCache (349ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (83ms)
-			SetupLoadedEditorAssemblies (705ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (429ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (93ms)
-				BeforeProcessingInitializeOnLoad (167ms)
-				ProcessInitializeOnLoadAttributes (411ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (66ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (242ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3534 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 155.5 MB.
-System memory in use after: 155.7 MB.
+Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.4 MB.
+System memory in use after: 155.6 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3968.
-Total: 4.059100 ms (FindLiveObjects: 0.259200 ms CreateObjectMapping: 0.128600 ms MarkObjects: 3.586900 ms  DeleteObjects: 0.082700 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3969.
+Total: 4.062200 ms (FindLiveObjects: 0.314600 ms CreateObjectMapping: 0.155100 ms MarkObjects: 3.504500 ms  DeleteObjects: 0.086700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -202,153 +128,92 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Tablet3.prefab
-  artifactKey: Guid(91255c4f32f9a7040b9943e33beb9ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tablet3.prefab using Guid(91255c4f32f9a7040b9943e33beb9ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db98ea1f20f47072e8ac034645950b55') in 0.504762 seconds 
-  Import took 0.514346 seconds .
+  path: Assets/_Scripts/UI/UI.cs
+  artifactKey: Guid(44ff1cac5ec4d6845b4baf49084bd730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/UI/UI.cs using Guid(44ff1cac5ec4d6845b4baf49084bd730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b7de08a4b79e56720e13ec3859d4601') in 0.033736 seconds 
+  Import took 0.039153 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 40.515627 seconds.
-  path: Assets/Scenes/FixedCam.unity
-  artifactKey: Guid(6afa24d6caebf234082cb71fc7192257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/FixedCam.unity using Guid(6afa24d6caebf234082cb71fc7192257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05adbc894efc6132c0fd167b12ef152c') in 0.019236 seconds 
-  Import took 0.039163 seconds .
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.6 MB.
+System memory in use after: 78.8 MB.
 
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3969.
+Total: 3.990900 ms (FindLiveObjects: 0.284900 ms CreateObjectMapping: 0.090700 ms MarkObjects: 3.590100 ms  DeleteObjects: 0.024200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 51.067409 seconds.
-  path: Assets/Scenes/Main Scene.unity
-  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Scene.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e638178b953cb96be26da455c15edb8') in 0.020339 seconds 
-  Import took 0.036243 seconds .
+  Time since last request: 309.400774 seconds.
+  path: Assets/_Scripts/UI/UI.cs
+  artifactKey: Guid(44ff1cac5ec4d6845b4baf49084bd730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/UI/UI.cs using Guid(44ff1cac5ec4d6845b4baf49084bd730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d24f383f90edef05bb7105dd7ace5d6') in 0.002708 seconds 
+  Import took 0.007807 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003739 seconds.
+Registered in 0.005503 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000028ECC15C490 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D3B29A0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DCCB900 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA71CD0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D560BD0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907ADD2010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074F775D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D7E6060 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907ADD2010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CB14020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DC718A0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907A83E010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290755D8010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DD53E30 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907880B040 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907A95DE40 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078F6C020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.InputSystem.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907906A010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA718D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907527B010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D57FFE0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907797A010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077305020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077FB5010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028ECC15C490 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077F49650 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907C03C020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DCCE3B0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA70ED0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA71AD0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907737F700 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078013020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078DB1020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077BA6020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078DB1020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077BA6020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000290786A9020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077685C30 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.586 seconds
+- Completed reload, in  1.117 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1586ms)
-		BeginReloadAssembly (170ms)
+	ReloadAssembly (1118ms)
+		BeginReloadAssembly (112ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1325ms)
-			LoadAssemblies (120ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (945ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (440ms)
+			SetupTypeCache (333ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (513ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (354ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (127ms)
-				ProcessInitializeOnLoadAttributes (360ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (233ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3412 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.5 MB.
-System memory in use after: 152.8 MB.
+Unloading 3413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.1 MB.
+System memory in use after: 147.3 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4015.
-Total: 4.911400 ms (FindLiveObjects: 0.286100 ms CreateObjectMapping: 0.137000 ms MarkObjects: 4.442900 ms  DeleteObjects: 0.042300 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3971.
+Total: 4.364600 ms (FindLiveObjects: 0.351000 ms CreateObjectMapping: 0.182100 ms MarkObjects: 3.807700 ms  DeleteObjects: 0.021800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -357,138 +222,55 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1812.526688 seconds.
-  path: Assets/Scenes/Main Scene.unity
-  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Scene.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '124d039865fa22cf95d06a176a3941b4') in 0.030045 seconds 
-  Import took 0.043053 seconds .
-
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005839 seconds.
+Registered in 0.007326 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002907CEBC410 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D27F540 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DCCB900 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA72ED0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D560BD0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907BDF4020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074F775D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907BF60010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CEF6B20 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CB14020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907BF2A080 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DC9E440 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D9C58D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D1055E0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907C4AC010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074F775D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078F6C020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.InputSystem.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907906A010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA72ED0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DE1DE40 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D198790 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029078AA8010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077305020 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029079203030 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CEBC410 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029077F49650 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002909DE1DE40 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CEBC410 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA730D0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907DA71ED0 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907C70F040 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D1A0290 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CEBC410 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907BF60010 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CEBC410 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907CF64950 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000029074FEC180 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002907D3DEA00 doesn't match image C:\Users\Bryce Reading\Downloads\Aircraft-Maintenance\Aircraft Maintenance\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.800 seconds
+- Completed reload, in  1.063 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1802ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (1064ms)
+		BeginReloadAssembly (123ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (44ms)
-		EndReloadAssembly (1574ms)
-			LoadAssemblies (133ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (878ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (605ms)
+			SetupTypeCache (304ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (564ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (336ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (150ms)
-				ProcessInitializeOnLoadAttributes (367ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (225ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (29ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3412 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 152.6 MB.
-System memory in use after: 152.8 MB.
+Unloading 3413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.2 MB.
+System memory in use after: 147.4 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4017.
-Total: 3.205000 ms (FindLiveObjects: 0.210500 ms CreateObjectMapping: 0.110500 ms MarkObjects: 2.863800 ms  DeleteObjects: 0.018900 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3973.
+Total: 4.704300 ms (FindLiveObjects: 0.356500 ms CreateObjectMapping: 0.170900 ms MarkObjects: 4.153200 ms  DeleteObjects: 0.021700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -497,15 +279,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 703.878550 seconds.
-  path: Assets/_Scripts/Features/WeaponSwap.cs
-  artifactKey: Guid(34d88cc55f5ed8f4ea368831b5e1ff74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts/Features/WeaponSwap.cs using Guid(34d88cc55f5ed8f4ea368831b5e1ff74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1588c1682fc77a07d575c2081426fae5') in 0.066480 seconds 
-  Import took 0.085872 seconds .
-
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

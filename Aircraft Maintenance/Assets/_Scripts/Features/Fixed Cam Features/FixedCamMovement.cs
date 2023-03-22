@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
 public class FixedCamMovement : MonoBehaviour
-{
-    [SerializeField]
+{   
     private float FC_smooth = 0.2f;
 
     private Vector3 FC_rotCur;
     private Vector3 FC_velSmooth = Vector3.zero;
     
-    [SerializeField]
     private float FC_dist = 5.0f;
 
-    [SerializeField]
-    private Transform FC_target;
+    private GameObject FC_target;
 
-    [SerializeField]
     private float FC_speed;
     
     Settings FC_setting;
@@ -25,42 +21,65 @@ public class FixedCamMovement : MonoBehaviour
     private float FC_rotX;
     private float FC_rotY;
 
-    public UI FC_ui;
+    private UI FC_ui;
 
     private void Start()
     {
+        FC_target = GameObject.FindWithTag("Model");
+        
         // FC_speed = FC_setting.s_sensitivty;
         FC_speed = 5f;
+        
+        // sets camera position at the start 
+        transform.position = FC_target.transform.position - transform.forward * FC_dist;
     }
 
 
     void Update()
     {
         // Mouse contols //
-        float FC_mX = Input.GetAxis("Mouse X") * FC_speed;
-        float FC_mY = Input.GetAxis("Mouse Y") * FC_speed;
-        
-        FC_rotY += FC_mX;
-        FC_rotX += FC_mY;
+        if (Input.GetMouseButton(0))
+        {
+            float FC_mX = Input.GetAxis("Mouse X") * FC_speed;
+            float FC_mY = Input.GetAxis("Mouse Y") * FC_speed;
 
-        FC_rotX = Mathf.Clamp(FC_rotX, -90, 90);
+            FC_rotY += FC_mX;
+            FC_rotX += FC_mY;
 
-        Vector3 FC_nextRot = new Vector3(FC_rotX, FC_rotY);
-        FC_rotCur = Vector3.SmoothDamp(FC_rotCur, FC_nextRot, ref FC_velSmooth, FC_smooth);
+            FC_rotX = Mathf.Clamp(FC_rotX, -90, 90);
 
-        transform.localEulerAngles = FC_rotCur;
+            Vector3 FC_nextRot = new Vector3(FC_rotX, FC_rotY);
+            FC_rotCur = Vector3.SmoothDamp(FC_rotCur, FC_nextRot, ref FC_velSmooth, FC_smooth);
 
-        transform.position = FC_target.position - transform.forward * FC_dist;
+            transform.localEulerAngles = FC_rotCur;
 
-        //if (FC_ui.globalEnabled == true) { Cursor.lockState = CursorLockMode.None; }
-        //else { Cursor.lockState = CursorLockMode.Locked; }
+            transform.position = FC_target.transform.position - transform.forward * FC_dist;
+        }
 
-        // Adding keyboard contols A & D = Y axis W & S = X axis
-        
+        // Keyboard controls 
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.RotateAround(FC_target.transform.position, Vector3.up, FC_speed * Time.deltaTime * 10f);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.RotateAround(FC_target.transform.position, Vector3.up, -FC_speed * Time.deltaTime * 10f);
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.RotateAround(FC_target.transform.position, Vector3.right, FC_speed * Time.deltaTime * 10f);
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.RotateAround(FC_target.transform.position, Vector3.right, -FC_speed * Time.deltaTime * 10f);
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.Rotate(Vector3.up, FC_speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.Rotate(Vector3.up, -FC_speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.Rotate(Vector3.right, FC_speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.Rotate(Vector3.right, -FC_speed * Time.deltaTime);
+        // Zoom controls //
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            transform.position = FC_target.transform.position - transform.forward * FC_dist;
+            
+            if (FC_dist > 1.5f)
+            {
+                FC_dist -= 0.5f;
+            }
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            transform.position = FC_target.transform.position - transform.forward * FC_dist;
+            
+            if (FC_dist < 10f)
+            {
+                FC_dist += 0.5f;
+            }
+        }
     }
 }
