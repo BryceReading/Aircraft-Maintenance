@@ -10,7 +10,7 @@ using UnityEngine;
 public class WeaponSwap : MonoBehaviour
 {
     GameObject tablet;
-    Animator animator;
+    public Animator animator;
 
     public bool active;
 

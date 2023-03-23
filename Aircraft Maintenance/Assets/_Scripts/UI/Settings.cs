@@ -36,8 +36,8 @@ public class Settings : MonoBehaviour
     public Canvas AircraftSelect;
     public Canvas Help;
 
-    CameraChange cameraChange;
-    ModeSwitch modeSwitch;
+    public WeaponSwap weaponSwap;
+
     public void Start()
     {
         s_sound = 0.5f;
@@ -75,7 +75,13 @@ public class Settings : MonoBehaviour
         AircraftSelect.transform.SetParent(Fixed_transform);
         Help.transform.SetParent(Fixed_transform);
 
-        
+        Cursor.lockState = CursorLockMode.None;
+
+        if (weaponSwap.active == true)
+        {
+            weaponSwap.animator.SetTrigger("Lower Tablet");
+            weaponSwap.active = false;
+        }
     }
 
     //Change to Desktop Mouse controls
@@ -103,6 +109,12 @@ public class Settings : MonoBehaviour
         Help.transform.SetParent(FPS_transform);
 
         Cursor.lockState = CursorLockMode.None;
+
+        if(weaponSwap.active == true)
+        {
+            weaponSwap.animator.SetTrigger("Lower Tablet");
+            weaponSwap.active = false;
+        }
     }
 
     //Change to VR controls

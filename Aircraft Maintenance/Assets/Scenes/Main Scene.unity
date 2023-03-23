@@ -1222,6 +1222,7 @@ MonoBehaviour:
   SettingsMenu: {fileID: 46509183}
   AircraftSelect: {fileID: 1709112479}
   Help: {fileID: 8670979}
+  weaponSwap: {fileID: 693712445}
 --- !u!114 &46509185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4182,6 +4183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d88cc55f5ed8f4ea368831b5e1ff74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   active: 0
   ui: {fileID: 0}
 --- !u!4 &586481571
@@ -4628,6 +4630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d88cc55f5ed8f4ea368831b5e1ff74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   active: 0
   ui: {fileID: 91708853}
 --- !u!1 &717982889
