@@ -14,6 +14,7 @@ public class RotateCode : MonoBehaviour
     void Update()
     {
         transform.RotateAround(transform.position, Vector3.up,0.1f);
-        
+        //transform.Rotate(Vector3.forward*0.1f,Space.Self);
+
     }
 }

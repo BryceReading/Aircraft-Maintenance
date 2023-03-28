@@ -7,6 +7,13 @@ using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.ProBuilder;
+using UnityEngine.ProBuilder.MeshOperations;
+using UnityEditor.ProBuilder;
+using UnityEditor;
+using UnityEditor.EditorTools;
+using TMPro;
+using System.Linq;
 
 [RequireComponent(typeof(LoadModel))]
 public class AircraftUILoading : MonoBehaviour
@@ -18,6 +25,7 @@ public class AircraftUILoading : MonoBehaviour
     [HideInInspector]
     public RenderTexture[] displays = new RenderTexture[5];
     public int currentModel = 0;
+    private int loadedModel = 0;
 
     private void Start()
     {
@@ -118,13 +126,31 @@ public class AircraftUILoading : MonoBehaviour
         }
     }
 
+    public void SelectModel()
+    {
+        loaderCode.swapModel(loaderCode.modelList[currentModel]);
+        loadedModel = currentModel;
+    }
+
     public void loadViews2(int model)
+    {
+        privateLoad(model);
+    }
+
+    public void loadViews2()
+    {
+        privateLoad(loadedModel);
+    }
+
+    private void privateLoad(int model)
     {
         Renderer[] renderers;
 
         Destroy(currentLoaded2[0]);
         for(int j = 0; j < currentLoaded2.Length; j++) { Destroy(currentLoaded2[j]); }
+        Resources.UnloadUnusedAssets();
         GameObject Helicopter = Resources.Load<GameObject>("Aircraft/" + loaderCode.modelList[model]);
+
         currentLoaded2 = new GameObject[Helicopter.transform.childCount];
         //initCameras(currentLoaded2.Length);
         initLocations(currentLoaded2.Length);
@@ -137,14 +163,39 @@ public class AircraftUILoading : MonoBehaviour
 
         renderers = Helicopter.GetComponentsInChildren<MeshRenderer>();
         Bounds bounds = renderers[0].bounds;
-        for (int x = 1; x < renderers.Length; x++)
+
+
+        List<MeshFilter> children = currentLoaded2[0].transform.GetComponentsInChildren<MeshFilter>().ToList<MeshFilter>();
+        Vector3 extents = Vector3.zero;
+        foreach (MeshFilter child in children)
+        {
+            Vector3 abs = new Vector3(Mathf.Abs(child.transform.localPosition.x), Mathf.Abs(child.transform.localPosition.y), Mathf.Abs(child.transform.localPosition.z));
+            Vector3 t = abs + child.sharedMesh.bounds.extents;
+            extents.x = t.x > extents.x ? t.x : extents.x;
+            extents.y = t.y > extents.y ? t.y : extents.y;
+            extents.z = t.z > extents.z ? t.z : extents.z;
+        }
+
+        float size = extents.x > extents.z ? extents.x : extents.z;
+        size = size > extents.y ? size : extents.y;
+        size = size + 5;
+        cameras[0].orthographicSize = size;
+        Vector3 pos = (currentLoaded2[0].transform.position);
+        cameras[0].transform.position = new Vector3(pos.x,pos.y,pos.z - size);
+
+
+
+
+
+
+        /*for (int x = 1; x < renderers.Length; x++)
         {
             bounds.Encapsulate(renderers[x].bounds);
         }
         Vector3 globalPos = currentLoaded2[0].transform.TransformPoint(bounds.center);
         float maxDimension = Mathf.Max(Mathf.Abs(bounds.size.x * currentLoaded2[0].transform.localScale.x), Mathf.Abs(bounds.size.y * currentLoaded2[0].transform.localScale.y), Mathf.Abs(bounds.size.z * currentLoaded2[0].transform.localScale.z));
-        cameras[0].transform.position = new Vector3(globalPos.x, globalPos.y, globalPos.z - maxDimension * Mathf.Abs(currentLoaded2[0].transform.localScale.x));
-        cameras[0].orthographicSize = maxDimension;
+        *//*cameras[0].transform.position = new Vector3(globalPos.x, globalPos.y, globalPos.z - maxDimension * Mathf.Abs(currentLoaded2[0].transform.localScale.x));
+        cameras[0].orthographicSize = maxDimension;*//*
 
         int i = 0;
         try
@@ -171,7 +222,7 @@ public class AircraftUILoading : MonoBehaviour
                 }
             }
         }
-        catch { }
+        catch { }*/
         currentModel = model;
     }
 

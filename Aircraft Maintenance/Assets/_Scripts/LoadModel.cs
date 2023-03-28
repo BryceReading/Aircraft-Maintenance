@@ -16,8 +16,10 @@ public class LoadModel : MonoBehaviour
     [HideInInspector]
     public string[] nameOf = new string[size] {"Cockpit", "DropDoor", "MainDoor", "RotorEngine", "Tail", "Frame" }; //When you figure out the skeleton Loading, add in a skeleton here
     List<string>[] v_objList = new List<string>[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail, Frame
-    GameObject[] currentActive = new GameObject[size]; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail, Frame
+    GameObject currentActive; //Cockpit, DropDoor, MainDoor, RotorEngine, Tail, Frame
     public List<string> modelList = new List<string>();
+
+    public RemoveModels tablet;
 
     private void Start()
     {
@@ -29,9 +31,14 @@ public class LoadModel : MonoBehaviour
             temp[i] = temp[i].Split('.')[0];
         }
         modelList.AddRange(temp);
+
+        if(modelList.Contains("AW101"))
+        {
+            loadViewModel("AW101");
+        }
         
         /////ERROR CHECKING
-        /*                                                        foreach(string s in modelList)
+                                                              /*foreach(string s in modelList)
                                                                 {
                                                                     GameObject check = Resources.Load<GameObject>(v_path + s) as GameObject;
                                                                     if(check.transform.childCount != nameOf.Length || Array.IndexOf(nameOf, s) < 0)
@@ -42,32 +49,68 @@ public class LoadModel : MonoBehaviour
 
     }
 
-    public GameObject loadViewModel(string modelName, int region, Vector3 location)
+    public GameObject loadViewModel(string modelName, Vector3 location)
     {
-        GameObject loadModel = Resources.Load<GameObject>(nameOf[region] + "/" + modelName + "." + nameOf[region]);
-        return Instantiate(loadModel, location, Quaternion.identity);
+        GameObject loadModel = Resources.Load<GameObject>("Aircraft/" + modelName);
+        currentActive = Instantiate(loadModel, location, Quaternion.identity);
+        SetTablet();
+        currentActive.tag = "Model";
+        return currentActive;
+    }
+
+    public GameObject loadViewModel(string modelName)
+    {
+        GameObject loadModel = Resources.Load<GameObject>("Aircraft/" + modelName);
+        GameObject temp = Instantiate(loadModel, Vector3.zero, Quaternion.identity);
+        List<Transform> children = temp.transform.GetComponentsInChildren<Transform>().ToList<Transform>();
+        children.RemoveAt(0);
+        Vector3 extents = Vector3.zero;
+        foreach (Transform child in children)
+        {
+            Vector3 abs = new Vector3(Mathf.Abs(child.transform.localPosition.x), Mathf.Abs(child.transform.localPosition.y), Mathf.Abs(child.transform.localPosition.z));
+            Vector3 t = child.gameObject.transform.localPosition + child.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.extents;
+            extents.y = t.y > extents.y ? t.y : extents.y;
+        }
+
+        Vector3 move = extents/2; 
+        temp.transform.position += move;
+        currentActive = temp;
+        SetTablet();
+        currentActive.tag = "Model";
+        return currentActive;
+    }
+
+    private void SetTablet()
+    {
+        Transform temp = currentActive.transform.Find("Cockpit");
+        tablet.Cockpit = temp != null ? temp.gameObject : null;
+
+        temp = currentActive.transform.Find("MainDoor");
+        tablet.MainDoor = temp != null ? temp.gameObject : null;
+
+        temp = currentActive.transform.Find("DropDoor");
+        tablet.DropDoor = temp != null ? temp.gameObject : null;
+
+        temp = currentActive.transform.Find("RotorEngine");
+        tablet.RotorEngine = temp != null ? temp.gameObject : null;
+
+        temp = currentActive.transform.Find("Tail");
+        tablet.Tail = temp != null ? temp.gameObject : null;
+
+        tablet.CheckList();
     }
 
     public void swapModel(string modelName)
     {
-        for (int i = 0; i < currentActive.Count(); i++)
+        int childCount = currentActive.transform.childCount;
+        for (int i = 0; i < childCount; i++)
         {
-            Destroy(currentActive[i]);
-            currentActive[i] = null;
-        }      
+            Destroy(currentActive.transform.GetChild(i).gameObject);
+        }
+        Destroy(currentActive);
+        currentActive = null;
 
-        GameObject Cockpit = Resources.Load<GameObject>(nameOf[0] + "/" + modelName + "." + nameOf[0]);
-        GameObject DropDoor = Resources.Load<GameObject>(nameOf[1] + "/" + modelName + "." + nameOf[1]);
-        GameObject MainDoor = Resources.Load<GameObject>(nameOf[2] + "/" + modelName + "." + nameOf[2]);
-        GameObject RotorEngine = Resources.Load<GameObject>(nameOf[3] + "/" + modelName + "." + nameOf[3]);
-        GameObject Tail = Resources.Load<GameObject>(nameOf[4] + "/" + modelName + "." + nameOf[4]);
-
-
-        currentActive[0] = Instantiate(Cockpit, Vector3.zero, Quaternion.identity);
-        currentActive[1] = Instantiate(DropDoor, Vector3.zero, Quaternion.identity);
-        currentActive[2] = Instantiate(MainDoor, Vector3.zero, Quaternion.identity);
-        currentActive[3] = Instantiate(RotorEngine, Vector3.zero, Quaternion.identity);
-        currentActive[4] = Instantiate(Tail, Vector3.zero, Quaternion.identity);
+        loadViewModel(modelName);
 
     }
 }
