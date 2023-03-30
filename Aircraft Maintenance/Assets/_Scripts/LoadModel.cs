@@ -32,9 +32,9 @@ public class LoadModel : MonoBehaviour
         }
         modelList.AddRange(temp);
 
-        if(modelList.Contains("AW101"))
+        if(modelList.Contains("AW101 Aircraft"))
         {
-            loadViewModel("AW101");
+            loadViewModel("AW101 Aircraft");
         }
         
         /////ERROR CHECKING
