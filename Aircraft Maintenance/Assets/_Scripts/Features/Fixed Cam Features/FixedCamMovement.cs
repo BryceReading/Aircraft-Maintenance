@@ -37,6 +37,10 @@ public class FixedCamMovement : MonoBehaviour
 
     void Update()
     {
+        if(FC_target == null)
+        {
+            FC_target = GameObject.FindWithTag("Model");
+        }
         // Mouse contols //
         if (Input.GetMouseButton(0))
         {

@@ -21,7 +21,7 @@ public class DesktopCamLooking : MonoBehaviour
     void Update()
     {
         Sense = settings.s_sensitivty;
-        Debug.Log(Sense);
+
         float mouseX = Input.GetAxis("Mouse X") * Sense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * Sense * Time.deltaTime;
 
