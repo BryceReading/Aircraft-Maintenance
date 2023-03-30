@@ -10,6 +10,7 @@ public class DesktopCamLooking : MonoBehaviour
     float xRotation = 0f;
 
     UI ui;
+    public Settings settings;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,8 @@ public class DesktopCamLooking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Sense = settings.s_sensitivty;
+        Debug.Log(Sense);
         float mouseX = Input.GetAxis("Mouse X") * Sense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * Sense * Time.deltaTime;
 

@@ -16,12 +16,14 @@ public class Settings : MonoBehaviour
 
     public Button desktopMouse;
     public Button desktopFPS;
-    public Button VRButton;
 
     public int s_movement;
     public float s_sensitivty;
     public float s_sound;
+    public bool s_camera;
+
     public DesktopCamLooking desktopCamLooking;
+    public FixedCamMovement fixedCamMovement;
 
     public Canvas RemoveModels;
 
@@ -41,14 +43,25 @@ public class Settings : MonoBehaviour
     public void Start()
     {
         s_sound = 0.5f;
+        s_camera = true;
+
+        s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
     }
 
     //Scale the mouse sensitivity
     public void MouseSensitivity()
     {
-        s_sensitivty = (mouseSensitivity.value - 40.0f) / 500f;
-        desktopCamLooking.Sense = mouseSensitivity.value;
-        mouseText.text = ((int)s_sensitivty).ToString();
+        if(s_camera == true)
+        {
+            s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
+            desktopCamLooking.Sense = s_sensitivty;
+        }
+        else
+        {
+            s_sensitivty = mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = s_sensitivty;
+        }
+        mouseText.text = mouseSensitivity.value.ToString();
     }
 
     //Scale the sound volume
@@ -64,10 +77,17 @@ public class Settings : MonoBehaviour
         FixedCamera.gameObject.SetActive(true);
         FPSCamera.gameObject.SetActive(false);
 
-        helpText.text = "Fixed Controls";
+        helpText.text = "Fixed Controls\n" +
+            "Left Click and move mouse- Look around\n" +
+            "W/A/S/D- Look around";
+
+        s_camera = false;
+        
+        s_sensitivty = mouseSensitivity.value * 50f + 40f;
+        fixedCamMovement.FC_speed = s_sensitivty;
+
 
         desktopFPS.image.fillCenter = true;
-        VRButton.image.fillCenter = true;
         desktopMouse.image.fillCenter = false;
 
         Menu.transform.SetParent(Fixed_transform);
@@ -90,6 +110,11 @@ public class Settings : MonoBehaviour
         FixedCamera.gameObject.SetActive(false);
         FPSCamera.gameObject.SetActive(true);
 
+        s_camera = true;
+        
+        s_sensitivty = mouseSensitivity.value * 500f + 40f;
+        desktopCamLooking.Sense = mouseSensitivity.value;
+
         helpText.text = "FPS Controls\n" +
             "W- Forwards\n" +
             "A- Left\n" +
@@ -100,7 +125,6 @@ public class Settings : MonoBehaviour
             "E- Raise/Lower Tablet";
 
         desktopFPS.image.fillCenter = false;
-        VRButton.image.fillCenter = true;
         desktopMouse.image.fillCenter = true;
 
         Menu.transform.SetParent(FPS_transform);
@@ -115,18 +139,6 @@ public class Settings : MonoBehaviour
             weaponSwap.animator.SetTrigger("Lower Tablet");
             weaponSwap.active = false;
         }
-    }
-
-    //Change to VR controls
-    public void VR()
-    {
-        desktopMouse.image.fillCenter = true;
-        desktopFPS.image.fillCenter = true;
-        
-        helpText.text = "VR Controls";
-
-        s_movement = 2;
-        VRButton.image.fillCenter = false;
     }
 }
 

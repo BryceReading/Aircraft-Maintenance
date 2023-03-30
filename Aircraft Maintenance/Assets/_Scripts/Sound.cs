@@ -18,12 +18,6 @@ public class Sound : MonoBehaviour
         audioSource.volume = settings.s_sound;
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        audioSource.volume = settings.s_sound;
-        audioSource.Play();
-    }
-
     public void ButtonSound()
     {
         audioSource.volume = settings.s_sound;

@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
 public class FixedCamMovement : MonoBehaviour
-{   
+{
     private float FC_smooth = 0.2f;
 
     private Vector3 FC_rotCur;
     private Vector3 FC_velSmooth = Vector3.zero;
-    
+
     private float FC_dist = 5.0f;
 
     private GameObject FC_target;
 
-    private float FC_speed;
-    
-    Settings FC_setting;
+    public float FC_speed;
+
+    public Settings FC_setting;
 
     private float FC_rotX;
     private float FC_rotY;
@@ -26,10 +26,10 @@ public class FixedCamMovement : MonoBehaviour
     private void Start()
     {
         FC_target = GameObject.FindWithTag("Model");
-        
-        // FC_speed = FC_setting.s_sensitivty;
+
         FC_speed = 5f;
-        
+//        FC_speed = FC_setting.s_sensitivty;
+
         // sets camera position at the start 
         transform.position = FC_target.transform.position - transform.forward * FC_dist;
     }
@@ -40,8 +40,8 @@ public class FixedCamMovement : MonoBehaviour
         // Mouse contols //
         if (Input.GetMouseButton(0))
         {
-            float FC_mX = Input.GetAxis("Mouse X") * FC_speed;
-            float FC_mY = Input.GetAxis("Mouse Y") * FC_speed;
+            float FC_mX = Input.GetAxis("Mouse X") * FC_speed * Time.deltaTime;
+            float FC_mY = Input.GetAxis("Mouse Y") * FC_speed * Time.deltaTime;
 
             FC_rotY += FC_mX;
             FC_rotX += FC_mY;
@@ -57,16 +57,16 @@ public class FixedCamMovement : MonoBehaviour
         }
 
         // Keyboard controls 
-        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.RotateAround(FC_target.transform.position, Vector3.up, FC_speed * Time.deltaTime * 10f);
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.RotateAround(FC_target.transform.position, Vector3.up, -FC_speed * Time.deltaTime * 10f);
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.RotateAround(FC_target.transform.position, Vector3.right, FC_speed * Time.deltaTime * 10f);
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.RotateAround(FC_target.transform.position, Vector3.right, -FC_speed * Time.deltaTime * 10f);
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.RotateAround(FC_target.transform.position, Vector3.up, 50f * Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.RotateAround(FC_target.transform.position, Vector3.up, -50f * Time.deltaTime);
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.RotateAround(FC_target.transform.position, Vector3.right, 50f * Time.deltaTime);
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.RotateAround(FC_target.transform.position, Vector3.right, -50f * Time.deltaTime);
 
         // Zoom controls //
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
             transform.position = FC_target.transform.position - transform.forward * FC_dist;
-            
+
             if (FC_dist > 1.5f)
             {
                 FC_dist -= 0.5f;
@@ -75,8 +75,8 @@ public class FixedCamMovement : MonoBehaviour
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
         {
             transform.position = FC_target.transform.position - transform.forward * FC_dist;
-            
-            if (FC_dist < 10f)
+
+            if (FC_dist < 20f)
             {
                 FC_dist += 0.5f;
             }

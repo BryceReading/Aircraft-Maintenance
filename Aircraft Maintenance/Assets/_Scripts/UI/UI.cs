@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    public Canvas menu;
-    public Canvas settings;
-    public Canvas help;
-    public Canvas aircraftSelect;
+    public Canvas menuCanvas;
+    public Canvas settingsCanvas;
+    public Canvas helpCanvas;
+    public Canvas aircraftSelectCanvas;
 
     public bool globalEnabled = false;
     public WeaponSwap weaponSwap;
+    public Settings settings;
+    public FixedCamMovement fixedCamMovement;
+    public DesktopCamLooking desktopCamLooking;
+
     [SerializeField]
     public bool paused = false;
 
@@ -22,7 +26,7 @@ public class UI : MonoBehaviour
         if (paused == false && Input.GetKeyDown(KeyCode.Escape))
         {
             globalEnabled = true;
-            menu.enabled = true;
+            menuCanvas.enabled = true;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             paused = true;
@@ -30,9 +34,19 @@ public class UI : MonoBehaviour
         else if(paused == true && Input.GetKeyDown(KeyCode.Escape))
         {
             Resume();
-            aircraftSelect.enabled = false;
-            help.enabled = false;
-            settings.enabled = false;
+            aircraftSelectCanvas.enabled = false;
+            helpCanvas.enabled = false;
+            settingsCanvas.enabled = false;
+            if (settings.s_camera == false)
+            {
+                settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
+                fixedCamMovement.FC_speed = settings.s_sensitivty;
+            }
+            else
+            {
+                settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
+                desktopCamLooking.Sense = settings.mouseSensitivity.value;
+            }
         }
     }
 
@@ -40,44 +54,54 @@ public class UI : MonoBehaviour
     public void Resume()
     {
         globalEnabled = false;
-        menu.enabled = false;
+        menuCanvas.enabled = false;
         if (weaponSwap.active == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
         paused = false;
+        if (settings.s_camera == false)
+        {
+            settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = settings.s_sensitivty;
+        }
+        else
+        {
+            settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
+            desktopCamLooking.Sense = settings.mouseSensitivity.value;
+        }
     }
 
     //Goes to settings
     public void SettingsMenu()
     {
-        menu.enabled = false;
-        settings.enabled = true;
+        menuCanvas.enabled = false;
+        settingsCanvas.enabled = true;
     }
 
     //Goes to the help menu
     public void HelpMenu()
     {
-        menu.enabled = false;
-        help.enabled = true;
+        menuCanvas.enabled = false;
+        helpCanvas.enabled = true;
     }
 
     //Goes to Aircraft Select
     public void AircraftSelect()
     {
-        menu.enabled = false;
-        aircraftSelect.enabled = true;
+        menuCanvas.enabled = false;
+        aircraftSelectCanvas.enabled = true;
     }
 
     //Goes back, should go back to the menu
     public void Back()
     {
-        help.enabled = false;
-        settings.enabled = false;
-        aircraftSelect.enabled = false;
+        helpCanvas.enabled = false;
+        settingsCanvas.enabled = false;
+        aircraftSelectCanvas.enabled = false;
         
-        menu.enabled = true;
+        menuCanvas.enabled = true;
     }
 
     //Quits the application
