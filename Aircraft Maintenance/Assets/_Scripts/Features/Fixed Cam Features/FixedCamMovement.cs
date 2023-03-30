@@ -52,9 +52,9 @@ public class FixedCamMovement : MonoBehaviour
             FC_rotCur = Vector3.SmoothDamp(FC_rotCur, FC_nextRot, ref FC_velSmooth, FC_smooth);
 
             transform.localEulerAngles = FC_rotCur;
-
-            transform.position = FC_target.transform.position - transform.forward * FC_dist;
         }
+
+        transform.position = FC_target.transform.position - transform.forward * FC_dist;
 
         // Keyboard controls 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.RotateAround(FC_target.transform.position, Vector3.up, 50f * Time.deltaTime);
