@@ -12889,6 +12889,10 @@ PrefabInstance:
       propertyPath: settings
       value: 
       objectReference: {fileID: 46509184}
+    - target: {fileID: 6006710110966553599, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+      propertyPath: m_text
+      value: Drop Door & Frame
+      objectReference: {fileID: 0}
     - target: {fileID: 6006710110985999508, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 0.9529412
