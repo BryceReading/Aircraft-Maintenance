@@ -18,7 +18,7 @@ public class Settings : MonoBehaviour
     public Button desktopFPS;
 
     public int s_movement;
-    public float s_sensitivty;
+    public float s_sensitivity;
     public float s_sound;
     public bool s_camera;
 
@@ -45,7 +45,7 @@ public class Settings : MonoBehaviour
         s_sound = 0.5f;
         s_camera = true;
 
-        s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
+        s_sensitivity = (mouseSensitivity.value * 500f) + 40f;
     }
 
     //Scale the mouse sensitivity
@@ -53,13 +53,13 @@ public class Settings : MonoBehaviour
     {
         if(s_camera == true)
         {
-            s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
-            desktopCamLooking.Sense = s_sensitivty;
+            s_sensitivity = (mouseSensitivity.value * 500f) + 40f;
+            desktopCamLooking.Sense = s_sensitivity;
         }
         else
         {
-            s_sensitivty = mouseSensitivity.value * 50f + 40f;
-            fixedCamMovement.FC_speed = s_sensitivty;
+            s_sensitivity = mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = s_sensitivity;
         }
         mouseText.text = mouseSensitivity.value.ToString();
     }
@@ -83,8 +83,8 @@ public class Settings : MonoBehaviour
 
         s_camera = false;
         
-        s_sensitivty = mouseSensitivity.value * 50f + 40f;
-        fixedCamMovement.FC_speed = s_sensitivty;
+        s_sensitivity = mouseSensitivity.value * 50f + 40f;
+        fixedCamMovement.FC_speed = s_sensitivity;
 
 
         desktopFPS.image.fillCenter = true;
@@ -112,8 +112,8 @@ public class Settings : MonoBehaviour
 
         s_camera = true;
         
-        s_sensitivty = mouseSensitivity.value * 500f + 40f;
-        desktopCamLooking.Sense = mouseSensitivity.value;
+        s_sensitivity = mouseSensitivity.value * 500f + 40f;
+        desktopCamLooking.Sense = s_sensitivity;
 
         helpText.text = "FPS Controls\n" +
             "W- Forwards\n" +

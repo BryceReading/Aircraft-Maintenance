@@ -36,17 +36,7 @@ public class UI : MonoBehaviour
             Resume();
             aircraftSelectCanvas.enabled = false;
             helpCanvas.enabled = false;
-            settingsCanvas.enabled = false;
-            if (settings.s_camera == false)
-            {
-                settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
-                fixedCamMovement.FC_speed = settings.s_sensitivty;
-            }
-            else
-            {
-                settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
-                desktopCamLooking.Sense = settings.mouseSensitivity.value;
-            }
+            settingsCanvas.enabled = false;    
         }
     }
 
@@ -63,13 +53,13 @@ public class UI : MonoBehaviour
         paused = false;
         if (settings.s_camera == false)
         {
-            settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
-            fixedCamMovement.FC_speed = settings.s_sensitivty;
+            settings.s_sensitivity = settings.mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = settings.s_sensitivity;
         }
         else
         {
-            settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
-            desktopCamLooking.Sense = settings.mouseSensitivity.value;
+            settings.s_sensitivity = settings.mouseSensitivity.value * 500f + 40f;
+            desktopCamLooking.Sense = settings.s_sensitivity;
         }
     }
 
