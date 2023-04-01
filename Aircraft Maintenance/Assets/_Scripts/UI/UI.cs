@@ -36,7 +36,21 @@ public class UI : MonoBehaviour
             Resume();
             aircraftSelectCanvas.enabled = false;
             helpCanvas.enabled = false;
+<<<<<<< Updated upstream
             settingsCanvas.enabled = false;    
+=======
+            settingsCanvas.enabled = false;
+            if (settings.s_camera == false)
+            {
+                settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
+                fixedCamMovement.FC_speed = settings.s_sensitivty;
+            }
+            else
+            {
+                settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
+                desktopCamLooking.Sense = settings.mouseSensitivity.value;
+            }
+>>>>>>> Stashed changes
         }
     }
 
@@ -53,6 +67,7 @@ public class UI : MonoBehaviour
         paused = false;
         if (settings.s_camera == false)
         {
+<<<<<<< Updated upstream
             settings.s_sensitivity = settings.mouseSensitivity.value * 50f + 40f;
             fixedCamMovement.FC_speed = settings.s_sensitivity;
         }
@@ -60,6 +75,15 @@ public class UI : MonoBehaviour
         {
             settings.s_sensitivity = settings.mouseSensitivity.value * 500f + 40f;
             desktopCamLooking.Sense = settings.s_sensitivity;
+=======
+            settings.s_sensitivty = settings.mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = settings.s_sensitivty;
+        }
+        else
+        {
+            settings.s_sensitivty = settings.mouseSensitivity.value * 500f + 40f;
+            desktopCamLooking.Sense = settings.mouseSensitivity.value;
+>>>>>>> Stashed changes
         }
     }
 

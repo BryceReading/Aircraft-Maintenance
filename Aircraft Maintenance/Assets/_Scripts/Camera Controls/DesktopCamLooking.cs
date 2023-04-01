@@ -9,6 +9,10 @@ public class DesktopCamLooking : MonoBehaviour
 
     float xRotation = 0f;
 
+<<<<<<< Updated upstream
+=======
+    UI ui;
+>>>>>>> Stashed changes
     public Settings settings;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +22,13 @@ public class DesktopCamLooking : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+<<<<<<< Updated upstream
     { 
+=======
+    {
+        Sense = settings.s_sensitivty;
+
+>>>>>>> Stashed changes
         float mouseX = Input.GetAxis("Mouse X") * Sense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * Sense * Time.deltaTime;
 

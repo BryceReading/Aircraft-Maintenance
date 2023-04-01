@@ -18,7 +18,11 @@ public class Settings : MonoBehaviour
     public Button desktopFPS;
 
     public int s_movement;
+<<<<<<< Updated upstream
     public float s_sensitivity;
+=======
+    public float s_sensitivty;
+>>>>>>> Stashed changes
     public float s_sound;
     public bool s_camera;
 
@@ -45,7 +49,11 @@ public class Settings : MonoBehaviour
         s_sound = 0.5f;
         s_camera = true;
 
+<<<<<<< Updated upstream
         s_sensitivity = (mouseSensitivity.value * 500f) + 40f;
+=======
+        s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
+>>>>>>> Stashed changes
     }
 
     //Scale the mouse sensitivity
@@ -53,6 +61,7 @@ public class Settings : MonoBehaviour
     {
         if(s_camera == true)
         {
+<<<<<<< Updated upstream
             s_sensitivity = (mouseSensitivity.value * 500f) + 40f;
             desktopCamLooking.Sense = s_sensitivity;
         }
@@ -60,6 +69,15 @@ public class Settings : MonoBehaviour
         {
             s_sensitivity = mouseSensitivity.value * 50f + 40f;
             fixedCamMovement.FC_speed = s_sensitivity;
+=======
+            s_sensitivty = (mouseSensitivity.value * 500f) + 40f;
+            desktopCamLooking.Sense = s_sensitivty;
+        }
+        else
+        {
+            s_sensitivty = mouseSensitivity.value * 50f + 40f;
+            fixedCamMovement.FC_speed = s_sensitivty;
+>>>>>>> Stashed changes
         }
         mouseText.text = mouseSensitivity.value.ToString();
     }
@@ -83,8 +101,13 @@ public class Settings : MonoBehaviour
 
         s_camera = false;
         
+<<<<<<< Updated upstream
         s_sensitivity = mouseSensitivity.value * 50f + 40f;
         fixedCamMovement.FC_speed = s_sensitivity;
+=======
+        s_sensitivty = mouseSensitivity.value * 50f + 40f;
+        fixedCamMovement.FC_speed = s_sensitivty;
+>>>>>>> Stashed changes
 
 
         desktopFPS.image.fillCenter = true;
@@ -112,8 +135,13 @@ public class Settings : MonoBehaviour
 
         s_camera = true;
         
+<<<<<<< Updated upstream
         s_sensitivity = mouseSensitivity.value * 500f + 40f;
         desktopCamLooking.Sense = s_sensitivity;
+=======
+        s_sensitivty = mouseSensitivity.value * 500f + 40f;
+        desktopCamLooking.Sense = mouseSensitivity.value;
+>>>>>>> Stashed changes
 
         helpText.text = "FPS Controls\n" +
             "W- Forwards\n" +

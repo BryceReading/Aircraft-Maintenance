@@ -25,7 +25,11 @@ public class LoadModel : MonoBehaviour
     {
         v_path = (Application.dataPath + "/Resources/Aircraft/");
         string[] temp = Directory.GetFiles(v_path, "*.fbx");
+<<<<<<< Updated upstream
         for(int i =0; i< temp.Length; i++)
+=======
+        for (int i =0; i< temp.Length; i++)
+>>>>>>> Stashed changes
         {
             temp[i] = Path.GetFileName(temp[i]);
             temp[i] = temp[i].Split('.')[0];
@@ -36,6 +40,7 @@ public class LoadModel : MonoBehaviour
         {
             loadViewModel("AW101 Aircraft");
         }
+<<<<<<< Updated upstream
         
         /////ERROR CHECKING
                                                               /*foreach(string s in modelList)
@@ -47,6 +52,8 @@ public class LoadModel : MonoBehaviour
                                                                     }
                                                                 }*/
 
+=======
+>>>>>>> Stashed changes
     }
 
     public GameObject loadViewModel(string modelName, Vector3 location)

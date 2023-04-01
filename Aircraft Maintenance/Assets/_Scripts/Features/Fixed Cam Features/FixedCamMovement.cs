@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+<<<<<<< Updated upstream
 using static UnityEngine.GraphicsBuffer;
+=======
+>>>>>>> Stashed changes
 
 public class FixedCamMovement : MonoBehaviour
 {
@@ -24,17 +27,27 @@ public class FixedCamMovement : MonoBehaviour
 
     private UI FC_ui;
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     private void Start()
     {
         FC_target = GameObject.FindWithTag("Model");
 
         FC_speed = 5f;
+<<<<<<< Updated upstream
         // FC_speed = FC_setting.s_sensitivty;
 
         // sets camera position at the start 
         transform.position = FC_target.transform.position - transform.forward * FC_dist;
 
+=======
+//        FC_speed = FC_setting.s_sensitivty;
+
+        // sets camera position at the start 
+        transform.position = FC_target.transform.position - transform.forward * FC_dist;
+>>>>>>> Stashed changes
     }
 
 
@@ -44,8 +57,12 @@ public class FixedCamMovement : MonoBehaviour
         {
             FC_target = GameObject.FindWithTag("Model");
         }
+<<<<<<< Updated upstream
         
         // Mouse contols 
+=======
+        // Mouse contols //
+>>>>>>> Stashed changes
         if (Input.GetMouseButton(0))
         {
             float FC_mX = Input.GetAxis("Mouse X") * FC_speed * Time.deltaTime;
@@ -64,18 +81,30 @@ public class FixedCamMovement : MonoBehaviour
 
         transform.position = FC_target.transform.position - transform.forward * FC_dist;
 
+<<<<<<< Updated upstream
         // Keyboard controls         
 
+=======
+        // Keyboard controls 
+>>>>>>> Stashed changes
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) transform.RotateAround(FC_target.transform.position, Vector3.up, 50f * Time.deltaTime);
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) transform.RotateAround(FC_target.transform.position, Vector3.up, -50f * Time.deltaTime);
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) transform.RotateAround(FC_target.transform.position, Vector3.right, 50f * Time.deltaTime);
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) transform.RotateAround(FC_target.transform.position, Vector3.right, -50f * Time.deltaTime);
 
+<<<<<<< Updated upstream
         // Zoom controls
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
             transform.position = FC_target.transform.position - transform.forward * FC_dist;
             
+=======
+        // Zoom controls //
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            transform.position = FC_target.transform.position - transform.forward * FC_dist;
+
+>>>>>>> Stashed changes
             if (FC_dist > 1.5f)
             {
                 FC_dist -= 0.5f;
