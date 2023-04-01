@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.49600944, a: 1}
-  m_IndirectSpecularColor: {r: 0.38377613, g: 0.3942735, b: 0.37963918, a: 1}
+  m_IndirectSpecularColor: {r: 0.38378423, g: 0.3943262, b: 0.37977627, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1209,7 +1208,7 @@ MonoBehaviour:
   desktopMouse: {fileID: 109182312}
   desktopFPS: {fileID: 1285626261}
   s_movement: 0
-  s_sensitivty: 0
+  s_sensitivity: 0
   s_sound: 0
   s_camera: 0
   desktopCamLooking: {fileID: 322725099}
@@ -2975,6 +2974,17 @@ Transform:
   m_Father: {fileID: 903625036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &320522850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006710110985999508, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+  m_PrefabInstance: {fileID: 6006710109719413409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &322725094
 GameObject:
   m_ObjectHideFlags: 0
@@ -6973,6 +6983,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052925915}
   m_CullTransparentMesh: 1
+--- !u!114 &1070925825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006710109391957912, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+  m_PrefabInstance: {fileID: 6006710109719413409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1182592180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006710109498194979, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+  m_PrefabInstance: {fileID: 6006710109719413409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192495907
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,6 +7908,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 46509184}
+--- !u!114 &1402696891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006710111444190681, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+  m_PrefabInstance: {fileID: 6006710109719413409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1446131998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,11 +8328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b80c497b444a4429ccf3463c5c32d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CockpitButton: {fileID: 1540315566}
-  DropDoorButton: {fileID: 1453193323}
-  MainDoorButton: {fileID: 1836128667}
-  RotorEngineButton: {fileID: 252736680}
-  TailButton: {fileID: 2017223868}
+  CockpitButton: {fileID: 1182592180}
+  DropDoorButton: {fileID: 1402696891}
+  MainDoorButton: {fileID: 2143937182}
+  RotorEngineButton: {fileID: 320522850}
+  TailButton: {fileID: 1070925825}
   Cockpit: {fileID: 0}
   DropDoor: {fileID: 0}
   MainDoor: {fileID: 0}
@@ -12653,6 +12696,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
+--- !u!114 &2143937182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006710110273430886, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
+  m_PrefabInstance: {fileID: 6006710109719413409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &543450653496282901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6113256580206775732, guid: 91255c4f32f9a7040b9943e33beb9ec5, type: 3}
